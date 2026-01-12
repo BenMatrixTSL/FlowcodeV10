@@ -1,0 +1,882 @@
+<root>
+<document scada='1' panel2DSCADA='0' panel3DSCADA='0' panelPropsSCADA='0' panelConsoleSCADA='0' panelDataRecorderSCADA='0' panel2DCount='1' panel2DSCADA_0='6' playbackSCADA='0' ShouldAutoStartSCADA='0' ShouldLockCameraSCADA='0' ShouldBundleSCADA='1' SCADAProgramTitle='' buildnumber='0' schema='103' license='10,STEVET,X4QE0C' title='Blank Web' description='' fcversion='655364' target='SCADA.SCADA.WEBEXP' >
+	<config data='' clkspd='100000000' simspd='1' usewdt='0' constif='0' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='4095' />
+			<data name='ClockPin' value='0' />
+			<data name='DataPort' value='4095' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='2' />
+			<data name='CalculatedCommsDelay' value='2' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='1' center='1' unitscale='0' fixedscale='0' fixedx='1' fixedy='1' fixedz='1' headcode='0' />
+		<definition guid='b2a4536b-8120-4c54-8eef-d5907101c691' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='1' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='panel' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='sDate2' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+						<array size='20' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='sDate1' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+						<array size='20' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='sDaily' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+						<array size='20' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='OnClick' description='Called when the button is clicked' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='params' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='s' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='i' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='bClearChart' type='b1' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='comment' title='' comment='Most of the work here is to create the 
+appropriate parameters for the url' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='.params = &quot;&quot;' />
+							<exp exp='' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='cboLocation' macro='GetSelectedIndex' >
+							<return exp='.i' />
+						</command>
+						<command class_type='switch' title='Switch' textarea='36,25,36,25' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.i' >
+							<case >
+								<flowline />
+							</case>
+							<case exp='0' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;latitude=53.7167&quot;' />
+									</command>
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;&amp;longitude=-1.85&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='1' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;latitude=43.7001&quot;' />
+									</command>
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;&amp;longitude=-79.4163&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='2' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;latitude=-43.5333&quot;' />
+									</command>
+									<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<exp exp='.params = .params + &quot;&amp;longitude=172.6333&quot;' />
+									</command>
+								</flowline>
+							</case>
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='txtStart' macro='GetText' >
+							<return exp='.s' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='.params = .params + &quot;&amp;start_date=&quot; + .s' />
+						</command>
+						<command class_type='native' title='Javascript' ccode='FCL_BCLEARCHART = (FCL_S != FCV_SDATE1)
+' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' language='C' />
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='sDate1 = .s' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='txtEnd' macro='GetText' >
+							<return exp='.s' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='.params = .params + &quot;&amp;end_date=&quot; + .s' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.bClearChart == 0' swap='0' >
+							<flowline >
+								<command class_type='native' title='Javascript' ccode='FCL_BCLEARCHART = (FCL_S != FCV_SDATE2)
+' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' language='C' />
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='sDate2 = .s' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='.params = .params + &quot;&amp;timezone=GMT&quot;' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='rdoFahrenheit :: GetState ()' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='.params = .params + &quot;&amp;temperature_unit=fahrenheit&quot;' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='.params = .params + &quot;&amp;temperature_unit=celsius&quot;' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='rdoMin :: GetState ()' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='sDaily = &quot;temperature_2m_min&quot;' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='sDaily = &quot;temperature_2m_max&quot;' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+							<exp exp='.params = .params + &quot;&amp;daily=&quot; + sDaily' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='txtUrl' macro='SetText' >
+							<argument exp='.params' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.bClearChart' swap='0' >
+							<flowline >
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartColumn1' macro='ClearData' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='ClearData' />
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='comment' title='' comment='Now fetch the data from the url with 
+the appropriate parameters' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+							<argument exp='.params' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='PlotPoint' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='value' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' />
+						<param name='index' type='s32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='array' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='idx' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='cboLocation' macro='GetSelectedIndex' >
+							<return exp='.idx' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='AddPoint' >
+							<argument exp='.index' />
+							<argument exp='.value' />
+							<argument exp='.idx+1' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='PlotColumn' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='date' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<param name='temperature' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartColumn1' macro='AddPoint' >
+							<argument exp='.date' />
+							<argument exp='.temperature' />
+							<argument exp='1' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='DrawCharts' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='data' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='Daily' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='ArrData' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='ArrDates' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='len' type='s32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='idx' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='obj' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='temp' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' />
+						<local name='date' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='info' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='2000' />
+						</local>
+						<command class_type='comment' title='' comment='Set the text field to the JSON string to 
+help to understand its structure' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='ObjectToJSON' >
+							<return exp='.info' />
+							<argument exp='.data' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='txtUrl' macro='SetText' >
+							<argument exp='.info' />
+						</command>
+						<command class_type='comment' title='' comment='The following plots the line chart from the 
+received data using ArrayParse, which calls 
+our PlotPoint for each item in the array' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='GetValue' >
+							<return exp='.Daily' />
+							<argument exp='.data' />
+							<argument exp='&quot;daily&quot;' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='GetValue' >
+							<return exp='.ArrData' />
+							<argument exp='.Daily' />
+							<argument exp='sDaily' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Array1' macro='ArrayParse' >
+							<argument exp='.ArrData' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='Redraw' />
+						<command class_type='comment' title='' comment='The following is more long-winded and plots
+the column chart data' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='GetValue' >
+							<return exp='.ArrDates' />
+							<argument exp='.Daily' />
+							<argument exp='&quot;time&quot;' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Array1' macro='ArrayGetLength' >
+							<return exp='.len' />
+							<argument exp='.ArrDates' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='2' forvar='.idx' exp='.len' >
+							<flowline >
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Array1' macro='ArrayGetValue' >
+									<return exp='.obj' />
+									<argument exp='.ArrDates' />
+									<argument exp='.idx' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='ObjectToString' >
+									<return exp='.date' />
+									<argument exp='.obj' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Array1' macro='ArrayGetValue' >
+									<return exp='.obj' />
+									<argument exp='.ArrData' />
+									<argument exp='.idx' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='ObjectToNumber' >
+									<return exp='.temp' />
+									<argument exp='.obj' />
+								</command>
+								<command class_type='call' title='User Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='PlotColumn' >
+									<argument exp='.date' />
+									<argument exp='.temp' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartColumn1' macro='Redraw' />
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='ClearData' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartColumn1' macro='ClearData' />
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='2b8bf5a1-2d66-44fe-8023-cb41c33d1add' vmin='1' vmaj='0' codename='WebShape1' panelId='0' x='320' y='-125' z='1' xsz='125' ysz='31.25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='GdiShape1::nType' data='  0' />
+					<value target='GdiShape1::iSubStyle' data='  0' />
+					<value target='GdiShape1::iRounding' data='25' />
+					<value target='GdiShape1::colFill' data='-1' />
+					<value target='GdiShape1::colFillGradient' data='16777215' />
+					<value target='GdiShape1::nGradientStyle' data='  0' />
+					<value target='GdiShape1::nStyle' data='  0' />
+					<value target='GdiShape1::fThickness' data='1.00000' />
+					<value target='GdiShape1::iOutlineSize' data='1' />
+					<value target='GdiShape1::colOutline' data='0' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='2b8bf5a1-2d66-44fe-8023-cb41c33d1add' vmin='1' vmaj='0' codename='WebShape2' panelId='0' x='320' y='-185' z='0' xsz='125' ysz='31.25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='GdiShape1::nType' data='  0' />
+					<value target='GdiShape1::iSubStyle' data='  0' />
+					<value target='GdiShape1::iRounding' data='25' />
+					<value target='GdiShape1::colFill' data='-1' />
+					<value target='GdiShape1::colFillGradient' data='16777215' />
+					<value target='GdiShape1::nGradientStyle' data='  0' />
+					<value target='GdiShape1::nStyle' data='  0' />
+					<value target='GdiShape1::fThickness' data='1.00000' />
+					<value target='GdiShape1::iOutlineSize' data='1' />
+					<value target='GdiShape1::colOutline' data='0' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='9d2842d2-c72d-4631-94b3-1186cb496fff' vmin='1' vmaj='0' codename='cboLocation' panelId='0' x='320' y='-20' z='2' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sOptions' data='Halifax (UK)
+Toronto (CA)
+Christchurch (NZ)' />
+					<value target='bTypeIn' data='0' />
+					<value target='iLines' data='1' />
+					<value target='bMultiple' data='0' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  0' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='8572e90c-bb9d-4d3c-8350-a68d412af899' vmin='1' vmaj='0' codename='WebLabel1' panelId='0' x='110' y='-20' z='3' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='Choose location:' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  1' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='8572e90c-bb9d-4d3c-8350-a68d412af899' vmin='1' vmaj='0' codename='WebLabel2' panelId='0' x='110' y='-50' z='4' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='Start date:' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  1' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='8572e90c-bb9d-4d3c-8350-a68d412af899' vmin='1' vmaj='0' codename='WebLabel3' panelId='0' x='110' y='-80' z='5' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='End date:' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  1' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='c9c426b0-29da-406a-afa3-aa4bd66f785f' vmin='1' vmaj='0' codename='txtStart' panelId='0' x='320' y='-50' z='6' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='2023-01-01' />
+					<value target='iType' data='000' />
+					<value target='bLimitLength' data='0' />
+					<value target='iMaxLength' data='12' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  0' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='c9c426b0-29da-406a-afa3-aa4bd66f785f' vmin='1' vmaj='0' codename='txtEnd' panelId='0' x='320' y='-80' z='7' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='2023-06-29' />
+					<value target='iType' data='000' />
+					<value target='bLimitLength' data='0' />
+					<value target='iMaxLength' data='12' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  0' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoMax' panelId='0' x='335' y='-110' z='8' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='1' />
+					<value target='sLabel' data='Max' />
+					<value target='sGroupName' data='TempVals' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='8572e90c-bb9d-4d3c-8350-a68d412af899' vmin='1' vmaj='0' codename='WebLabel4' panelId='0' x='110' y='-110' z='9' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='Temp vals:' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  1' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoMin' panelId='0' x='335' y='-140' z='10' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='Min' />
+					<value target='sGroupName' data='TempVals' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoFahrenheit' panelId='0' x='335' y='-200' z='11' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='F' />
+					<value target='sGroupName' data='TempUnits' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoCelsius' panelId='0' x='335' y='-170' z='12' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='1' />
+					<value target='sLabel' data='C' />
+					<value target='sGroupName' data='TempUnits' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='8572e90c-bb9d-4d3c-8350-a68d412af899' vmin='1' vmaj='0' codename='WebLabel5' panelId='0' x='110' y='-170' z='13' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='Temp units:' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  1' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='724dc5b4-8519-41ff-a96d-413275961305' vmin='1' vmaj='0' codename='WebChartLine1' panelId='0' x='520' y='-455' z='14' xsz='62.5' ysz='36.7188' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='BaseChart1::sTitle' data='Temperature' />
+					<value target='nStackType' data='000' />
+					<value target='iLegend' data='002' />
+					<value target='nStyle' data='000' />
+					<value target='custcolFill' data='-1' />
+					<value target='custcolOutline' data='-1' />
+					<value target='custcolPlot' data='16777215' />
+					<value target='custcolLine' data='3947580' />
+					<value target='custcolText' data='3947580' />
+					<value target='custcolSeries1' data='4697456' />
+					<value target='custcolSeries2' data='13998939' />
+					<value target='custcolSeries3' data='49407' />
+					<value target='custcolSeries4' data='255' />
+					<value target='custcolSeries5' data='12583040' />
+					<value target='BaseChart1::sXName' data='day' />
+					<value target='BaseChart1::bXAuto' data='1' />
+					<value target='BaseChart1::dXStart' data='0' />
+					<value target='BaseChart1::dXEnd' data='100' />
+					<value target='BaseChart1::bXLogarithmic' data='0' />
+					<value target='BaseChart1::bXScalable' data='0' />
+					<value target='BaseChart1::sYName' data='C' />
+					<value target='BaseChart1::bYAuto' data='0' />
+					<value target='BaseChart1::dYStart' data='-30' />
+					<value target='BaseChart1::dYEnd' data='40' />
+					<value target='BaseChart1::bYLogarithmic' data='0' />
+					<value target='BaseChart1::bYScalable' data='0' />
+					<value target='sCustomAttributes' data='' />
+					<value target='sCustomOptions' data='' />
+					<value target='iSeriesCount' data='003' />
+					<value target='BaseChart1::sSeriesName1' data='Halifax' />
+					<value target='BaseChart1::sSeriesName2' data='Toronto' />
+					<value target='BaseChart1::sSeriesName3' data='Christchurch' />
+					<value target='BaseChart1::sSeriesName4' data='Series 4' />
+					<value target='BaseChart1::sSeriesName5' data='Series 5' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='42f80fc0-5172-44ef-850c-d42d28ef0bd8' vmin='1' vmaj='0' codename='WebChartColumn1' panelId='0' x='520' y='-935' z='15' xsz='62.5' ysz='36.7188' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='BaseChart1::sTitle' data='Temperature' />
+					<value target='nStackType' data='000' />
+					<value target='iLegend' data='000' />
+					<value target='nStyle' data='000' />
+					<value target='custcolFill' data='-1' />
+					<value target='custcolOutline' data='-1' />
+					<value target='custcolPlot' data='16777215' />
+					<value target='custcolLine' data='3947580' />
+					<value target='custcolText' data='3947580' />
+					<value target='custcolSeries1' data='4697456' />
+					<value target='custcolSeries2' data='13998939' />
+					<value target='custcolSeries3' data='49407' />
+					<value target='custcolSeries4' data='255' />
+					<value target='custcolSeries5' data='12583040' />
+					<value target='BaseChart1::sXName' data='date' />
+					<value target='BaseChart1::sYName' data='C' />
+					<value target='BaseChart1::bYAuto' data='0' />
+					<value target='BaseChart1::dYStart' data='-30' />
+					<value target='BaseChart1::dYEnd' data='40' />
+					<value target='BaseChart1::bYLogarithmic' data='0' />
+					<value target='BaseChart1::bYScalable' data='0' />
+					<value target='sCustomAttributes' data='' />
+					<value target='sCustomOptions' data='' />
+					<value target='iSeriesCount' data='001' />
+					<value target='BaseChart1::sSeriesName1' data='Series 1' />
+					<value target='BaseChart1::sSeriesName2' data='Series 2' />
+					<value target='BaseChart1::sSeriesName3' data='Series 3' />
+					<value target='BaseChart1::sSeriesName4' data='Series 4' />
+					<value target='BaseChart1::sSeriesName5' data='Series 5' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='c9c426b0-29da-406a-afa3-aa4bd66f785f' vmin='1' vmaj='0' codename='txtUrl' panelId='0' x='520' y='-1230' z='16' xsz='125' ysz='125' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sLabel' data='Input text' />
+					<value target='iType' data='000' />
+					<value target='bLimitLength' data='0' />
+					<value target='iMaxLength' data='12' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='16' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::nHorizontalAlignment' data='  0' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='209c214a-3fdf-4a09-9354-e2f146dbdedc' vmin='1' vmaj='0' codename='WebFetch1' panelId='0' x='770' y='-40' z='17' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sUrl' data='https://archive-api.open-meteo.com/v1/archive' />
+					<value target='macProcess' data='DrawCharts' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='15f033b8-7422-4475-9e3a-35e5731fb589' vmin='1' vmaj='0' codename='WebPopup1' panelId='0' x='860' y='-40' z='18' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values />
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='c68e35f2-92e3-4a48-abd9-4a1818aa1023' vmin='1' vmaj='0' codename='btnGo1' panelId='0' x='600.5' y='-90' z='19' xsz='38.447' ysz='62.5' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sText' data='Go!' />
+					<value target='Caption::nHorizontalAlignment' data='2' />
+					<value target='Caption::fntFamily' data='Calibri' />
+					<value target='iFontSize' data='16' />
+					<value target='Caption::iFontSize' data='16' />
+					<value target='Caption::colTextColour' data='0' />
+					<value target='Caption::bBold' data='0' />
+					<value target='Caption::bItalic' data='0' />
+					<value target='Caption::bUnderline' data='0' />
+					<value target='Caption::bStrikethrough' data='0' />
+					<value target='Button::colFill' data='13816530' />
+					<value target='iStyle' data='000' />
+					<value target='iBorderWidth' data='0' />
+					<value target='Button::iOutlineSize' data='0' />
+					<value target='Button::colOutline' data='0' />
+					<value target='bShadow' data='1' />
+					<value target='Shadow::colFill' data='7895160' />
+					<value target='macroOnClick' data='OnClick' />
+					<value target='sCursor' data='024' />
+					<value target='bShowPress' data='1' />
+					<value target='bAutoColour' data='1' />
+					<value target='colHover' data='5724159' />
+					<value target='colClick' data='5921370' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='2e5d477d-7e43-4691-95e1-becf96fed02d' vmin='1' vmaj='0' codename='WebObject1' panelId='0' x='770' y='-110' z='20' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values />
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='a1612734-3758-43e9-b5f1-2b1a35304d19' vmin='1' vmaj='0' codename='Array1' panelId='0' x='860' y='-110' z='21' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='macForEach' data='PlotPoint' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='286.77' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='237' dy='746' zoom='100' fix_topleft='0' />
+		<page x='1000' y='1000' show='1' rgb='16777215' />
+		<winpos ID='7005' RectRecentFloat='272,148,1255,722' RectRecentDocked='0,0,237,775' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='-657,965,-7,1415' RectRecentDocked='0,0,237,775' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='2D Panel' >
+			<winpos ID='1171' RectRecentFloat='318,342,1449,1624' RectRecentDocked='637,183,874,958' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAA1gEAAAIDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='DrawCharts' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAA1gEAAAIDAAA' zoom='95' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='PlotPoint' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAA1gEAAAIDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='PlotColumn' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAA1gEAAAIDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='OnClick' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAA1gEAAAIDAAA' zoom='100' scrollx='0' scrolly='1523' flags='0' />
+	</layout>
+</document>
+</root>

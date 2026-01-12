@@ -1,0 +1,117 @@
+<root>
+<file schema='103' />
+<macros >
+<macro >
+<flowline name='Prv_BubbleSort' description='' statediag='0' >
+<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+<param name='Handle' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+<param name='Property' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='20' />
+</param>
+<local name='sTemp' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+<array size='30' />
+</local>
+<local name='i' type='s16' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='bDone' type='b1' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='sa' type='T8*' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot; \&quot;\&quot; &quot;' setinit='{&quot;&quot;}' >
+<array size='200' />
+<array size='30' />
+</local>
+<local name='iFilteredItems' type='s16' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='s1' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+<array size='30' />
+</local>
+<local name='s2' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+<array size='30' />
+</local>
+<local name='sUnsorted' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='2000' />
+</local>
+<local name='Sorted' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='2000' />
+</local>
+<local name='len1' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+<local name='len2' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+<local name='val' type='s32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.GetFilter' >
+<return exp='.sUnsorted' />
+<argument exp='.Handle' />
+<argument exp='.Property' />
+</command>
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.i = 0' />
+<exp exp='.Sorted = &quot;&quot;' />
+<exp exp='.bDone = 0' />
+</command>
+<command class_type='loop' title='Loop' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='.bDone == 0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='82,3,82,3' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.sa[.i] = SplitString$(.sUnsorted,&quot;\n&quot;,.i)' />
+</command>
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Length$(.sa[.i]) = 0' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.bDone = 1' />
+</command>
+</flowline>
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.i = .i + 1' />
+</command>
+</flowline>
+</command>
+</flowline>
+</command>
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.iFilteredItems = .i' />
+<exp exp='.bDone = 0' />
+<exp exp='.i = 0' />
+</command>
+<command class_type='loop' title='Loop' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='.bDone == 0' >
+<flowline >
+<command class_type='label' title='Restart' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' labelid='0' labelname='A' />
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.bDone = 1' />
+</command>
+<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='2' forvar='.i' exp='.iFilteredItems - 1' >
+<flowline >
+<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.len1 = Length$(.sa[.i])' />
+<exp exp='.len2 = Length$(.sa[.i + 1])' />
+<exp exp='.s1 = Right$(.sa[.i],.len1 - 3)' />
+<exp exp='.s2 = Right$(.sa[.i + 1],.len2 - 3)' />
+</command>
+<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Prv_NumericCompare(.s1,.s2) &gt; 0' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.sTemp = .sa[.i]' />
+<exp exp='.sa[.i] = .sa[.i + 1]' />
+<exp exp='.sa[.i + 1] = .sTemp' />
+<exp exp='.bDone = 0' />
+</command>
+<command class_type='goto' title='Goto Connection Point' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' labelid='0' labelname='' />
+</flowline>
+<flowline />
+</command>
+</flowline>
+</command>
+</flowline>
+</command>
+<command class_type='loop' title='Loop' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='2' forvar='.i' exp='.iFilteredItems' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.Sorted = .Sorted + .sa[.i]' />
+<exp exp='.Sorted = .Sorted + &quot;\n&quot;' />
+</command>
+</flowline>
+</command>
+<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetFilter' >
+<argument exp='.Handle' />
+<argument exp='.Property' />
+<argument exp='.Sorted' />
+</command>
+</flowline>
+</macro>
+</macros>
+<variables />
+</root>

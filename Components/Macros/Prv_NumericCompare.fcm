@@ -1,0 +1,70 @@
+<root>
+<file schema='103' />
+<macros >
+<macro >
+<flowline name='Prv_NumericCompare' description='' statediag='0' >
+<return name='Return' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+<param name='s1' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='20' />
+</param>
+<param name='s2' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='20' />
+</param>
+<local name='i1' type='s32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='i2' type='s32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='s1a' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+<array size='20' />
+</local>
+<local name='s2a' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+<array size='20' />
+</local>
+<command class_type='call' title='User Macro' textarea='36,0,511,300' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Prv_GetNumericPos' >
+<return exp='.i1' />
+<argument exp='.s1' />
+</command>
+<command class_type='call' title='User Macro' textarea='36,0,511,300' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Prv_GetNumericPos' >
+<return exp='.i2' />
+<argument exp='.s2' />
+</command>
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.s1a = left$(.s1,.i1)' />
+<exp exp='.s2a = left$(.s2,.i2)' />
+</command>
+<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.Return = Compare$(.s1a,.s2a,0)' />
+</command>
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Return == 0' swap='0' >
+<flowline >
+<command class_type='calculation' title='Get numberic value' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.s1 = mid$(.s1,.i1,99)' />
+<exp exp='.i1 = StringToInt$(.s1)' />
+</command>
+<command class_type='calculation' title='Get numberic value' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.s2 = mid$(.s2,.i2,99)' />
+<exp exp='.i2 = StringToInt$(.s2)' />
+</command>
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.i1 &gt; .i2' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.Return = 1' />
+</command>
+</flowline>
+<flowline >
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.i1 &lt; .i2' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.Return = -1' />
+</command>
+</flowline>
+<flowline />
+</command>
+</flowline>
+</command>
+</flowline>
+<flowline />
+</command>
+</flowline>
+</macro>
+</macros>
+<variables />
+</root>

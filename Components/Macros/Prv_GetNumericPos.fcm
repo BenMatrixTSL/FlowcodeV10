@@ -1,0 +1,47 @@
+<root>
+<file schema='103' />
+<macros >
+<macro >
+<flowline name='Prv_GetNumericPos' description='' statediag='0' >
+<return name='Return' type='s32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+<param name='s' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+<array size='20' />
+</param>
+<local name='done' type='b1' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='i' type='u32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<local name='NumStart' type='u32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+<command class_type='comment' title='' comment='Find first numeric position' textarea='12,0,487,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.i = 0' />
+<exp exp='.Return = 0' />
+</command>
+<command class_type='loop' title='Loop' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='.done = 0' >
+<flowline >
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.i &gt;= Length$(.s)' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.done = 1' />
+</command>
+</flowline>
+<flowline >
+<command class_type='decision' title='Decision' textarea='36,0,511,300' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='(.s[.i] &gt;= &apos;0&apos;) &amp;&amp; (.s[.i] &lt;= &apos;9&apos;)' swap='0' >
+<flowline >
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.done = 1' />
+<exp exp='.Return = .i' />
+</command>
+</flowline>
+<flowline />
+</command>
+</flowline>
+</command>
+<command class_type='calculation' title='Calculation' textarea='36,0,511,300' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+<exp exp='.i = .i + 1' />
+</command>
+</flowline>
+</command>
+</flowline>
+</macro>
+</macros>
+<variables />
+</root>
