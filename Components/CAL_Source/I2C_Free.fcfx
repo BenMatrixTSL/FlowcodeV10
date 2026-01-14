@@ -1,0 +1,1771 @@
+<root>
+<document scada='0' schema='102' license='1,Bubthenib,W7G473' title='' description='' fcversion='0' target='PIC.16F.16F877A' >
+	<config data='!0,3f72%0,2%2,0%3,0%6,1%7,0%9,3%b,1%8,1%d,1' clkspd='19660800' simspd='1' usewdt='0' constif='0' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='1' />
+			<data name='ClockPin' value='6' />
+			<data name='DataPort' value='1' />
+			<data name='DataPin' value='7' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='9' />
+			<data name='CalculatedCommsDelay' value='9' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='0' center='1' unitscale='1' fixedscale='0' fixedx='0' fixedy='0' fixedz='0' headcode='0' />
+		<definition guid='c36b20c2-f4d0-438a-a071-a32eb658ceb5' vstate='40' vmin='3' vmaj='1' srcleaf='I2C.fcfx' visiblename='I2C Free' description='Chip Abstraction Layer for Two Wire I2C Communications' category='Peripheral CAL' category2='' category3='' catenable='1' author='Matrix Ltd' manuname='' manucode='' sysinfo='15733527' keywords='' dynamic='0' scadaCompatible='0' embeddedCompatible='1' iconpath='..\icons\components\Chip.png' />
+		<component class_type='root' codename='cal_i2c' x='0' y='0' z='0' xsz='16' ysz='16' zsz='16' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
+			<resources />
+			<properties >
+				<property name='REF' target='REF' typeid='14' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)$(instance)' initialiser='' />
+				<property name='Channel' target='CHANNEL' typeid='16' hidden='0' locked='0' info='Channel selection' filter='000Software
+001Channel 1
+' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='SDA' target='SDA' typeid='5' hidden='0' locked='1' info='Pin used for SDA (data signal)' />
+				<property name='SCL' target='SCL' typeid='5' hidden='0' locked='1' info='Pin used for SCL (clock signal)' />
+				<property name='SDA Remap Pin' target='SDAPins' typeid='16' hidden='1' locked='0' info='' />
+				<property name='SCL Remap Pin' target='SCLPins' typeid='16' hidden='1' locked='0' info='' />
+				<property name='Baud Select' target='BAUD_LIST' typeid='16' hidden='0' locked='0' info='Baud rate option selector' filter='000Custom
+001100KHz
+002400KHz
+0031MHz' />
+				<property name='Baud Rate' target='BAUD' typeid='14' hidden='0' locked='1' info='Baud rate to be used' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='Slew Rate Control' target='SRC' typeid='16' hidden='0' locked='0' info='Slew Rate Control Enabled or Disabled' filter='000Disabled
+001Enabled' />
+				<property name='SMBus Inputs' target='SMB' typeid='16' hidden='0' locked='0' info=' When Enabled input logic thresholds are compliant with SMBus specification' filter='000Disabled
+001Enabled' />
+				<property name='Stop Delay' target='StopDel' typeid='7' hidden='0' locked='0' info='On older microcontroller devices there is a potential for the I2C hardware channel to lock up if there is not 
+a 10ms delay between an I2C stop event and the next I2C start event.
+
+Most modern microcontrollers will not have a problem so this property can be disabled to speed up the 
+I2C communications. ' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='BMode' target='BMODE' typeid='14' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='SDA_PORT' target='SDA_PORT' typeid='10' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='port$(value:6-,1,l)' />
+				<property name='SDA_TRIS' target='SDA_TRIS' typeid='10' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='tris$(value:6-,1,l)' />
+				<property name='SDA_PIN' target='SDA_PIN' typeid='14' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='SCL_PORT' target='SCL_PORT' typeid='10' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='port$(value:6-,1,l)' />
+				<property name='SCL_TRIS' target='SCL_TRIS' typeid='10' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='tris$(value:6-,1,l)' />
+				<property name='SCL_PIN' target='SCL_PIN' typeid='14' hidden='1' locked='0' info='' expansion='MX_I2C_$(variable:u)_$(instance)' initialiser='($(value))' />
+				<property name='MASTER' target='MASTER' typeid='14' hidden='1' locked='1' info='' expansion='MX_I2C_$(value)' initialiser='' />
+				<property name='Simulation' folder='property_1' hidden='0' >
+					<property name='Scope Traces' target='ScopeTraces' typeid='7' hidden='0' locked='0' info='Selects if the scope traces are automatically generated or not' />
+					<property name='Console Data' target='ConsoleData' typeid='7' hidden='0' locked='0' info='Selects if the console data is automatically generated or not' />
+				</property>
+				<property name='REMAPPABLE' target='REMAPPABLE' typeid='14' hidden='1' locked='1' info='' />
+				<property name='SDA Bank' target='SDABank' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SDA Bank 2' target='SDABank2' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SCL Bank' target='SCLBank' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SCL Bank 2' target='SCLBank2' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SDA RP Num' target='SDARPNUM' typeid='21' hidden='1' locked='1' info='' />
+				<property name='SCL RP Num' target='SCLRPNUM' typeid='21' hidden='1' locked='1' info='' />
+				<property name='SDA RP REG' target='SDARPREG' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SCL RP REG' target='SCLRPREG' typeid='10' hidden='1' locked='1' info='' />
+				<property name='SDA Reg' target='SDAREG' typeid='16' hidden='1' locked='1' info='' />
+				<property name='SCL Reg' target='SCLREG' typeid='16' hidden='1' locked='1' info='' />
+			</properties>
+			<values >
+				<value target='REF' data='1' />
+				<value target='CHANNEL' data='001' />
+				<value target='SDA' data='$PORTC.4' />
+				<value target='SCL' data='$PORTC.3' />
+				<value target='SDAPins' data='000' />
+				<value target='SCLPins' data='000' />
+				<value target='BAUD_LIST' data='002' />
+				<value target='BAUD' data='400000' />
+				<value target='SRC' data='000' />
+				<value target='SMB' data='000' />
+				<value target='StopDel' data='1' />
+				<value target='BMODE' data='0' />
+				<value target='SDA_PORT' data='$PORTC.4' />
+				<value target='SDA_TRIS' data='$PORTC.4' />
+				<value target='SDA_PIN' data='4' />
+				<value target='SCL_PORT' data='$PORTC.3' />
+				<value target='SCL_TRIS' data='$PORTC.3' />
+				<value target='SCL_PIN' data='3' />
+				<value target='MASTER' data='1' />
+				<value target='ScopeTraces' data='0' />
+				<value target='ConsoleData' data='0' />
+				<value target='REMAPPABLE' data='' />
+				<value target='SDABank' data='' />
+				<value target='SDABank2' data='' />
+				<value target='SCLBank' data='' />
+				<value target='SCLBank2' data='' />
+				<value target='SDARPNUM' data='0' />
+				<value target='SCLRPNUM' data='0' />
+				<value target='SDARPREG' data='' />
+				<value target='SCLRPREG' data='' />
+				<value target='SDAREG' data='000' />
+				<value target='SCLREG' data='000' />
+			</values>
+			<events >
+				<event class='DataRecorder' event='ResyncPacket' target='Ev_ResyncPacket' />
+				<event class='Components' event='Property' target='Ev_Property_Changed' />
+				<event class='DataRecorder' event='Decode' target='Ev_DecodeSync' />
+				<event class='Compile' event='AddHeader' target='Ev_AddHeader' />
+				<event class='Connection' event='FCDChange' target='Ev_ChipChange' />
+				<event class='DataRecorder' event='FmtPacket' target='Ev_FmtPacket' />
+				<event class='Components' event='Initialise' target='Ev_Initialise' />
+				<event class='Connection' event='ChipChange' target='Ev_ChipChange' />
+			</events>
+			<apis >
+				<api name='Slave_Uninit' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='GetValue' alt='' type='2' proto='1' />
+				<api name='Master_Stop' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Slave_Init' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Master_Uninit' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Slave_Status' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='GetConsoleHandle' alt='' type='2' proto='1' />
+				<api name='Slave_TxByte' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Slave_RxByte' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='SetValue' alt='' type='2' proto='1' />
+				<api name='Master_Init' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Master_Start' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Master_TxByte' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Master_Restart' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='Master_RxByte' alt='FC_CAL_I2C_$(macro)_$(instance)' type='5' proto='1' />
+				<api name='GetList' alt='' type='2' proto='1' />
+			</apis>
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='ScopeSCL' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='pvt_channel' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='ScopeSDA' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='console' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='ScopeGroup' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='StrmId_Clk' type='s16' description='The ScopeStream[] of the clock' isconst='1' isHidden='0' isinit='1' usrinit='3' setinit='3' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='Slave_Uninit' description='Uninitialise the Slave' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nSlave_Uninit()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Prv_TextConsole' description='Send text to the console' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='str' type='T8*' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Console.WriteText' >
+							<argument exp='console' />
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_Initialise' description='Initialisation routine for the component once the component is linked to its parent' statediag='0' >
+						<return name='Return' type='u32' description='Non-zero to prevent initialisation' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='pvt_channel = 255' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelList' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelPorts' />
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='ScopeTraces' swap='0' >
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='SimSetupScope' />
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='ScopeGroup = 0' />
+									<exp exp='ScopeSCL = 0' />
+									<exp exp='ScopeSDA = 0' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='ConsoleData' swap='0' >
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_SetupConsole' />
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='console = 0' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='GetValue' description='Get the Named property value. 
+' statediag='0' >
+						<return name='Return' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;\x00&quot;' setinit='' />
+						<param name='Name' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(Compare$ (.Name,&quot;CHANNEL&quot;,1) = 0) OR (Compare$ (.Name,&quot;SDA&quot;,1) = 0) OR (Compare$ (.Name,&quot;SCL&quot;,1) = 0) OR (Compare$ (.Name,&quot;BAUD&quot;,1) = 0) OR (Compare$ (.Name,&quot;BAUD_LIST&quot;,1) = 0) OR (Compare$ (.Name,&quot;SRC&quot;,1) = 0) OR (Compare$ (.Name,&quot;SMB&quot;,1) = 0)' swap='0' >
+							<flowline >
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetValue' >
+									<return exp='.Return' />
+									<argument exp='this' />
+									<argument exp='.Name' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Debug.PrintLn' >
+									<argument exp='&quot;GetValue(&quot; + .Name + &quot;) not valid. Use CHANNEL, SDA, SCL, BAUD_LIST, BAUD, SMB or SRC&quot;' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='LoadPortString' description='load port string into property from the given name and fcd handle' statediag='0' >
+						<return name='Return' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;\x00&quot;' setinit='' />
+						<param name='fcd_h' type='h32' description='FCD Handle' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Name' type='T8' description='Port Name' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<local name='port_h' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='port' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='pin' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='sim' title='Get the child' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+							<return exp='.port_h' />
+							<argument exp='.Name' />
+							<argument exp='.fcd_h' />
+						</command>
+						<command class_type='decision' title='If valid' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.port_h != 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.port = ::Tree .GetSubValue (.port_h,&quot;port&quot;)' />
+									<exp exp='.pin = ::Tree .GetSubValue (.port_h,&quot;pin&quot;)' />
+									<exp exp='::Component .Property .SetValue (this, .Name,ConvertPort (.port, .pin))' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_Stop' description='Output a Master Stop' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nMaster_Stop()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Prv_SetupConsole' description='Setup a console for the component' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='inst' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.GetInstance' >
+							<return exp='.inst' />
+							<argument exp='this' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;I2C &quot; + ToString$ (.inst)' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Console.AddText' >
+							<return exp='console' />
+							<argument exp='.str' />
+							<argument exp='1' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Slave_Init' description='Initialise the Slave with the given Address, or range of Addresses.
+Only address bits that have a corresponding bit set in the Mask will be compared with the incoming bus address.' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='Address' type='u8' description='7 Bit Address of this device (Bit 0 is ignored)' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Mask' type='u8' description='Bit mask used to compare addresses' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nSlave_Init()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_ChipChange' description='Sent when the target device has changed' statediag='0' >
+						<return name='Return' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Target' type='T8' description='The name of the new target device' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='pvt_channel = 255' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelList' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelPorts' />
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='LoadChannelList' description='load the fcd Channel list into the property' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='n' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='::Component .Property .SetFilter (this,&quot;CHANNEL&quot;,GetChannelList ())' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_Uninit' description='Uninitialise the Master' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nMaster_Uninit()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Slave_Status' description='Returns the Slave Status.
+Bit 0 = 1 Indicates address/data byte available in the buffer to read
+Bit 5 = 1 Indicates that the last byte received or transmitted was data (else address)
+' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;\nSlave_Status()&quot;' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='GetChannelList' description='Retrieves the channel list from the FCD for this device' statediag='0' >
+						<return name='Return' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;\x00&quot;' setinit='' />
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='s' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='fcd_h' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='sim' title='Set the first item as &quot;Software&quot; channel' cmdcolor='16711808' cmdcolor_sec='16711808' component='fcdhelper' macro='GetIntListItem' >
+							<return exp='.Return' />
+							<argument exp='0' />
+							<argument exp='&quot;Software&quot;' />
+						</command>
+						<command class_type='comment' title='' comment='Get the hardware channel list, if any' textarea='245,10,245,10' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+							<return exp='.fcd_h' />
+							<argument exp='&quot;device.i2c&quot;' />
+							<argument exp='0' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.x = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='.fcd_h' >
+							<flowline >
+								<command class_type='calculation' title='Create the displayed channel string' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.x = .x + 1' />
+									<exp exp='.s = &quot;Channel &quot; + ToString$ (.x)' />
+								</command>
+								<command class_type='sim' title='Construct the list item' cmdcolor='16711808' cmdcolor_sec='16711808' component='fcdhelper' macro='GetIntListItem' >
+									<return exp='.s' />
+									<argument exp='.x' />
+									<argument exp='.s' />
+								</command>
+								<command class_type='calculation' title='Add to result' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Return = .Return + .s' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.StepNamedNext' >
+									<argument exp='.fcd_h' />
+									<argument exp='&quot;i2c&quot;' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='GetConsoleHandle' description='Obtains the CAL console handle' statediag='0' >
+						<return name='Return' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Return = console' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Slave_TxByte' description='Send a data byte, returns Ack/Nak from Master
+0=Ack=More, 1=Nak=Last' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Data' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;\nSlave_TxByte(&quot; + NumberToHex$ (.Data) + &quot;)&quot;' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_FmtPacket' description='Sent when a %e is read in a format string when decoding a packet' statediag='0' >
+						<return name='Return' type='u32' description='Non-zero to claim the packet, zero for Flowcode to add a packet automatically' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='StreamH' type='h32' description='The scope being decoded' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='TimeOffset' type='s32' description='The time-reference of the start of the overlay packet' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Duration' type='u32' description='The time duration the packet of the overlay packet' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Data' type='u8' description='The data packet to be decoded' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<param name='Bits' type='u32' description='The number of bits (not bytes) in Data[]' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='EventId' type='u32' description='A event identifier to help distinguish decodes' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Result' type='T8*' description='The format string to return' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='//.Result = NumberToHex$ (.Data[0]) + &quot; &quot; + NumberToHex$ (.Data[1])' />
+							<exp exp='.Result[0] = (.Data[0] &gt;= 0x20 &amp;&amp; .Data[0] &lt; 0x7F) * .Data[0] + ! (.Data[0] &gt;= 0x20 &amp;&amp; .Data[0] &lt; 0x7F) * &apos;.&apos;' />
+							<exp exp='.Result[1] = &apos;\0&apos;' />
+							<exp exp='.Result = .Result + &quot;[&quot; + numberToHex$ (.Data[0]) + &quot;]&quot;' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.Data[1]' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Result = .Result + &quot;Nak\n&quot;' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Result = .Result + &quot;Ack\n&quot;' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Console.WriteText' >
+							<argument exp='console' />
+							<argument exp='.Result' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Slave_RxByte' description='Returns the data received, and sends either Ack or Nak
+Set parameter Last as: 1=Last=Nak, 0=Ack=More' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Last' type='u8' description='Sends Ack if 0, else Nak' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;\nSlave_RxByte()&quot;' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='SetValue' description='Change Named property to new Value. 
+If &quot;CHANNEL&quot; the ports will be also updated from the fcd
+' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='Name' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<param name='Value' type='T8' description='port value as string' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(Compare$ (.Name,&quot;SDA&quot;,1) = 0) OR (Compare$ (.Name,&quot;SCL&quot;,1) = 0) OR (Compare$ (.Name,&quot;BAUD_LIST&quot;,1) = 0) OR (Compare$ (.Name,&quot;SRC&quot;,1) = 0) OR (Compare$ (.Name,&quot;SMB&quot;,1) = 0)' swap='0' >
+							<flowline >
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+									<argument exp='this' />
+									<argument exp='.Name' />
+									<argument exp='.Value' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='Compare$ (.Name,&quot;BAUD&quot;,1) = 0' swap='0' >
+									<flowline >
+										<command class_type='sim' title='Set the Baud List to Custom' disable='1' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+											<argument exp='this' />
+											<argument exp='&quot;BAUD_LIST&quot;' />
+											<argument exp='&quot;0&quot;' />
+										</command>
+										<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+											<argument exp='this' />
+											<argument exp='.Name' />
+											<argument exp='.Value' />
+										</command>
+									</flowline>
+									<flowline >
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='Compare$ (.Name,&quot;CHANNEL&quot;,1) = 0' swap='0' >
+											<flowline >
+												<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+													<argument exp='this' />
+													<argument exp='.Name' />
+													<argument exp='.Value' />
+												</command>
+												<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelPorts' />
+											</flowline>
+											<flowline >
+												<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Debug.PrintLn' >
+													<argument exp='&quot;SetValue(&quot; + .Name + &quot;) not valid. Use CHANNEL, SDA, SCL, BAUD_LIST, BAUD, SMB or SRC&quot;' />
+												</command>
+											</flowline>
+										</command>
+									</flowline>
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_Property_Changed' description='Sent when a property has been changed by the User' statediag='0' >
+						<return name='Return' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelPorts' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='::Component .Property .SetValue (this,&quot;SDA_PORT&quot;, ::Component .Property .GetValue (this,&quot;SDA&quot;))' />
+							<exp exp='::Component .Property .SetValue (this,&quot;SDA_TRIS&quot;, ::Component .Property .GetValue (this,&quot;SDA&quot;))' />
+							<exp exp='::Component .Property .SetValue (this,&quot;SDA_PIN&quot;,ParsePin (::Component .Property .GetValue (this,&quot;SDA&quot;)))' />
+							<exp exp='' />
+							<exp exp='::Component .Property .SetValue (this,&quot;SCL_PORT&quot;, ::Component .Property .GetValue (this,&quot;SCL&quot;))' />
+							<exp exp='::Component .Property .SetValue (this,&quot;SCL_TRIS&quot;, ::Component .Property .GetValue (this,&quot;SCL&quot;))' />
+							<exp exp='::Component .Property .SetValue (this,&quot;SCL_PIN&quot;,ParsePin (::Component .Property .GetValue (this,&quot;SCL&quot;)))' />
+							<exp exp='' />
+						</command>
+						<command class_type='calculation' title='Set the BMODE Flags' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='::Component .Property .SetValue (this,&quot;BMODE&quot;, ((SMB &lt;&lt; 1) + SRC))' />
+							<exp exp='' />
+						</command>
+						<command class_type='switch' title='Switch' textarea='36,25,511,325' cmdcolor='16734039' cmdcolor_sec='16734039' exp='BAUD_LIST' >
+							<case >
+								<flowline >
+									<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='1' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='1' >
+								<flowline >
+									<command class_type='comment' title='' comment='100KHz' textarea='12,0,487,300' cmdcolor='5751039' cmdcolor_sec='5751039' />
+									<command class_type='sim' title='Panel' textarea='36,0,511,300' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='100000' />
+									</command>
+									<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='0' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='2' >
+								<flowline >
+									<command class_type='comment' title='' comment='400KHz' textarea='12,0,487,300' cmdcolor='5751039' cmdcolor_sec='5751039' />
+									<command class_type='sim' title='Panel' textarea='36,0,511,300' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='400000' />
+									</command>
+									<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='0' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='3' >
+								<flowline >
+									<command class_type='comment' title='' comment='1MHz' textarea='12,0,487,300' cmdcolor='5751039' cmdcolor_sec='5751039' />
+									<command class_type='sim' title='Panel' textarea='36,0,511,300' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='1000000' />
+									</command>
+									<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+										<argument exp='this' />
+										<argument exp='&quot;BAUD&quot;' />
+										<argument exp='0' />
+									</command>
+								</flowline>
+							</case>
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='ScopeTraces' swap='0' >
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='SimSetupScope' />
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='ScopeGroup = 0' />
+									<exp exp='ScopeSCL = 0' />
+									<exp exp='ScopeSDA = 0' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='ConsoleData' swap='0' >
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_SetupConsole' />
+							</flowline>
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='console = 0' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_Init' description='Initialise the Master' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nMaster_Init()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_Start' description='Output a Master Start sequence' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nMaster_Start()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='LoadChannelPorts' description='Set the SDA and SCL port values from the FCD  based on CHANNEL number' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='master' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='fcd_h' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='txrx_h' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='comment' title='' comment='Load the PORTS from the FCD
+based on Channel number ' textarea='12,0,487,300' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='pvt_channel = CHANNEL' />
+							<exp exp='.x = 1' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='CHANNEL &gt; 0' swap='0' >
+							<flowline >
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+									<argument exp='this' />
+									<argument exp='&quot;SDA&quot;' />
+									<argument exp='0' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+									<argument exp='this' />
+									<argument exp='&quot;SCL&quot;' />
+									<argument exp='0' />
+								</command>
+								<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+									<return exp='.fcd_h' />
+									<argument exp='&quot;device.i2c&quot;' />
+									<argument exp='0' />
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.fcd_h' swap='0' >
+									<flowline >
+										<command class_type='comment' title='' comment='::Tree.StepNamedIndex()
+ain&apos;t got one!!!
+' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+										<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='.x &lt; CHANNEL' >
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.x = .x + 1' />
+												</command>
+												<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.StepNamedNext' >
+													<argument exp='.fcd_h' />
+													<argument exp='&quot;i2c&quot;' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.fcd_h' swap='0' >
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='::Component .Property .SetValue (this,&quot;REMAPPABLE&quot;, ::Tree .GetSubValue (.fcd_h,&quot;remappable&quot;))' />
+													<exp exp='' />
+												</command>
+												<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='REMAPPABLE = 1' swap='0' >
+													<flowline >
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+															<argument exp='this' />
+															<argument exp='&quot;SDAPins&quot;' />
+															<argument exp='1' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+															<argument exp='this' />
+															<argument exp='&quot;SCLPins&quot;' />
+															<argument exp='1' />
+														</command>
+														<command class_type='comment' title='' comment='SDA' textarea='113,4,113,4' cmdcolor='5751039' cmdcolor_sec='5751039' />
+														<command class_type='sim' title='Get the child' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+															<return exp='.txrx_h' />
+															<argument exp='&quot;sda&quot;' />
+															<argument exp='.fcd_h' />
+														</command>
+														<command class_type='decision' title='If valid' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.txrx_h != 0' swap='0' >
+															<flowline >
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpnum&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SDARPNUM&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpbank&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SDABank&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;arpbank&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SDABank2&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpreg&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SDARPREG&quot;' />
+																	<argument exp='.str' />
+																</command>
+															</flowline>
+															<flowline />
+														</command>
+														<command class_type='comment' title='' comment='SCL' textarea='113,4,113,4' cmdcolor='5751039' cmdcolor_sec='5751039' />
+														<command class_type='sim' title='Get the child' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+															<return exp='.txrx_h' />
+															<argument exp='&quot;scl&quot;' />
+															<argument exp='.fcd_h' />
+														</command>
+														<command class_type='decision' title='If valid' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.txrx_h != 0' swap='0' >
+															<flowline >
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpnum&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SCLRPNUM&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpbank&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SCLBank&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;arpbank&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SCLBank2&quot;' />
+																	<argument exp='.str' />
+																</command>
+																<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+																	<exp exp='.str = ::Tree .GetSubValue (.txrx_h,&quot;rpreg&quot;)' />
+																</command>
+																<command class_type='sim' title='ConvertPort(.port, .pin)' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+																	<argument exp='this' />
+																	<argument exp='&quot;SCLRPREG&quot;' />
+																	<argument exp='.str' />
+																</command>
+															</flowline>
+															<flowline />
+														</command>
+														<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='ParseRemapPins' />
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetValue' >
+															<return exp='.str' />
+															<argument exp='this' />
+															<argument exp='&quot;SDAPins&quot;' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;SDAREG&quot;' />
+															<argument exp='.str' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetListItem' >
+															<return exp='.str' />
+															<argument exp='this' />
+															<argument exp='&quot;SDAPins&quot;' />
+															<argument exp='.str' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;SDA&quot;' />
+															<argument exp='.str' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetValue' >
+															<return exp='.str' />
+															<argument exp='this' />
+															<argument exp='&quot;SCLPins&quot;' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;SCLREG&quot;' />
+															<argument exp='.str' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetListItem' >
+															<return exp='.str' />
+															<argument exp='this' />
+															<argument exp='&quot;SCLPins&quot;' />
+															<argument exp='.str' />
+														</command>
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;SCL&quot;' />
+															<argument exp='.str' />
+														</command>
+													</flowline>
+													<flowline >
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+															<argument exp='this' />
+															<argument exp='&quot;SDAPins&quot;' />
+															<argument exp='0' />
+														</command>
+														<command class_type='sim' title='Simulation' textarea='85,-17,85,-17' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+															<argument exp='this' />
+															<argument exp='&quot;SCLPins&quot;' />
+															<argument exp='0' />
+														</command>
+														<command class_type='comment' title='' comment='set the port and pin for sda and scl' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+														<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadPortString' >
+															<argument exp='.fcd_h' />
+															<argument exp='&quot;sda&quot;' />
+														</command>
+														<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadPortString' >
+															<argument exp='.fcd_h' />
+															<argument exp='&quot;scl&quot;' />
+														</command>
+													</flowline>
+												</command>
+												<command class_type='comment' title='' comment='test for Master' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.master = ::Tree .GetSubValue (.fcd_h,&quot;master&quot;)' />
+												</command>
+												<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.master = 1' swap='0' >
+													<flowline >
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;MASTER&quot;' />
+															<argument exp='.x' />
+														</command>
+													</flowline>
+													<flowline >
+														<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetValue' >
+															<argument exp='this' />
+															<argument exp='&quot;MASTER&quot;' />
+															<argument exp='0' />
+														</command>
+													</flowline>
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+									</flowline>
+									<flowline />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+									<argument exp='this' />
+									<argument exp='&quot;SDA&quot;' />
+									<argument exp='1' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetWritable' >
+									<argument exp='this' />
+									<argument exp='&quot;SCL&quot;' />
+									<argument exp='1' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+									<argument exp='this' />
+									<argument exp='&quot;SDAPins&quot;' />
+									<argument exp='0' />
+								</command>
+								<command class_type='sim' title='Simulation' textarea='85,-17,85,-17' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetVisible' >
+									<argument exp='this' />
+									<argument exp='&quot;SCLPins&quot;' />
+									<argument exp='0' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='ParseRemapPins' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='fcd' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='temp_str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='port' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='bit' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='count' type='u16' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+						<local name='bank' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='temp_str2' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='sim' title='Point to first FCD port pin' cmdcolor='16711808' cmdcolor_sec='16711808' macro='FCD.GetPathHandle' >
+							<return exp='.fcd' />
+							<argument exp='&quot;device.pins.pin&quot;' />
+							<argument exp='0' />
+						</command>
+						<command class_type='comment' title='' comment='Clear Filters' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetFilter' >
+							<argument exp='this' />
+							<argument exp='&quot;SDAPins&quot;' />
+							<argument exp='&quot;&quot;' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetFilter' >
+							<argument exp='this' />
+							<argument exp='&quot;SDAReg&quot;' />
+							<argument exp='&quot;&quot;' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetFilter' >
+							<argument exp='this' />
+							<argument exp='&quot;SCLPins&quot;' />
+							<argument exp='&quot;&quot;' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.SetFilter' >
+							<argument exp='this' />
+							<argument exp='&quot;SCLReg&quot;' />
+							<argument exp='&quot;&quot;' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='.fcd &gt; 0' >
+							<flowline >
+								<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetSubValue' >
+									<return exp='.temp_str' />
+									<argument exp='.fcd' />
+									<argument exp='&quot;rpreg&quot;' />
+								</command>
+								<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetSubValue' >
+									<return exp='.temp_str2' />
+									<argument exp='.fcd' />
+									<argument exp='&quot;rpnum&quot;' />
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(Length$ (.temp_str) &gt; 0) || (Length$ (.temp_str2) &gt; 0)' swap='0' >
+									<flowline >
+										<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetSubValue' >
+											<return exp='.port' />
+											<argument exp='.fcd' />
+											<argument exp='&quot;port&quot;' />
+										</command>
+										<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetSubValue' >
+											<return exp='.bit' />
+											<argument exp='.fcd' />
+											<argument exp='&quot;bit&quot;' />
+										</command>
+										<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetSubValue' >
+											<return exp='.bank' />
+											<argument exp='.fcd' />
+											<argument exp='&quot;rpbank&quot;' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.port[0] = .port[0] - &apos;0&apos;' />
+											<exp exp='.port[0] = .port[0] + &apos;A&apos;' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.port = .port[0] + &quot;.&quot; + .bit' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.port = &quot;$PORT&quot; + .port' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(Compare$ (.bank,SDABank,1) == 0) || (Compare$ (.bank,SDABank2,1) == 0)' swap='0' >
+											<flowline >
+												<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.AddListItem' >
+													<argument exp='this' />
+													<argument exp='&quot;SDAPins&quot;' />
+													<argument exp='.temp_str2' />
+													<argument exp='.port' />
+												</command>
+												<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.AddListItem' >
+													<argument exp='this' />
+													<argument exp='&quot;SDAReg&quot;' />
+													<argument exp='.temp_str2' />
+													<argument exp='.temp_str' />
+												</command>
+												<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.AddListItem' >
+													<argument exp='this' />
+													<argument exp='&quot;SCLPins&quot;' />
+													<argument exp='.temp_str2' />
+													<argument exp='.port' />
+												</command>
+												<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.AddListItem' >
+													<argument exp='this' />
+													<argument exp='&quot;SCLReg&quot;' />
+													<argument exp='.temp_str2' />
+													<argument exp='.temp_str' />
+												</command>
+												<command class_type='sim' title='Simulation' disable='1' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Debug.PrintLn' >
+													<argument exp='&quot;Output - Port &quot; + .port + &quot; Reg &quot; + .temp_str' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.count = .count + 1' />
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+									</flowline>
+									<flowline />
+								</command>
+								<command class_type='sim' title='Panel' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.StepNamedNext' >
+									<argument exp='.fcd' />
+									<argument exp='&quot;pin&quot;' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_TxByte' description='Send a data byte' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Data' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;\nMaster_TxByte(&quot; + NumberToHex$ (.Data) + &quot;)&quot;' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='SimSetupScope' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='ObjectHandle' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='ParentName' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='Port' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='Bit' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Initialise values' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.ObjectHandle = this' />
+							<exp exp='ScopeGroup = 0' />
+							<exp exp='ScopeSCL = 0' />
+							<exp exp='ScopeSDA = 0' />
+						</command>
+						<command class_type='sim' title='Step away from I2C CAL' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.StepParent' >
+							<argument exp='.ObjectHandle' />
+						</command>
+						<command class_type='sim' title='Get Name Of Current Position' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Tree.GetName' >
+							<return exp='.ParentName' />
+							<argument exp='.ObjectHandle' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.ParentName = .ParentName + &quot; - I2C &quot; + STRING CHANNEL' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddGroup' >
+							<return exp='ScopeGroup' />
+							<argument exp='.ParentName' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddStream' >
+							<return exp='ScopeSDA' />
+							<argument exp='ScopeGroup' />
+							<argument exp='&quot;SDA &quot; + SDA_PORT' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Port = Char$ (SDA_PORT,5) - &apos;A&apos;' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Bit = Char$ (SDA_PORT,7) - &apos;0&apos;' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='Char$ (SDA_PORT,8) &gt; 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Bit = (.Bit * 10) + (Char$ (SDA_PORT,8) - &apos;0&apos;)' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddPort' >
+							<argument exp='ScopeSDA' />
+							<argument exp='.Port' />
+							<argument exp='(1 &lt;&lt; .Bit)' />
+							<argument exp='1' />
+							<argument exp='0' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddStream' >
+							<return exp='ScopeSCL' />
+							<argument exp='ScopeGroup' />
+							<argument exp='&quot;SCL &quot; + SCL_PORT' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Port = Char$ (SCL_PORT,5) - &apos;A&apos;' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Bit = Char$ (SCL_PORT,7) - &apos;0&apos;' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='Char$ (SCL_PORT,8) &gt; 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Bit = (.Bit * 10) + (Char$ (SCL_PORT,8) - &apos;0&apos;)' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddPort' >
+							<argument exp='ScopeSCL' />
+							<argument exp='.Port' />
+							<argument exp='(1 &lt;&lt; .Bit)' />
+							<argument exp='1' />
+							<argument exp='0' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.SetDecodable' >
+							<argument exp='ScopeSCL' />
+							<argument exp='0' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_DecodeSync' description='Sent when a block of the stream is to be decoded into packets' statediag='0' >
+						<return name='Return' type='u32' description='Non-zero if the data could be decoded' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='StreamH' type='h32' description='The stream handle' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='TimeOffset' type='s32' description='The -ve offset from now of the earliest time to be decoded, in microseconds' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='PacketSize' type='u32' description='The number of microseconds of the decoded packet from its start' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='baud' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='step' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='SearchFlags' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='PacketFlags' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='start_step' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='sim' title='Set Packet format' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.SetPacketFmt' >
+							<argument exp='.StreamH' />
+							<argument exp='&quot;%e&quot;' />
+							<argument exp='0xffffff' />
+							<argument exp='0xd0FFE0a0' />
+						</command>
+						<command class_type='sim' title='Clear Packets from the area' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.ClearPackets' >
+							<argument exp='.StreamH' />
+							<argument exp='.TimeOffset' />
+							<argument exp='.PacketSize' />
+						</command>
+						<command class_type='comment' title='' comment='Find initial clock high to low .TimeOffset and the .PacketSize max
+' textarea='273,-14,273,-14' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='sim' title='Find the next transition' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+							<return exp='.step' />
+							<argument exp='ScopeSCL' />
+							<argument exp='.TimeOffset' />
+							<argument exp='.PacketSize' />
+							<argument exp='0.5' />
+							<argument exp='::DataRecorder.Find_HighLow' />
+						</command>
+						<command class_type='comment' title='' comment='the SDA line should be low at this point' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='calculation' title='' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.TimeOffset = .TimeOffset + .step' />
+							<exp exp='.PacketSize = .PacketSize - .step' />
+						</command>
+						<command class_type='sim' title='Find the next transition' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+							<return exp='.step' />
+							<argument exp='ScopeSCL' />
+							<argument exp='.TimeOffset' />
+							<argument exp='.PacketSize' />
+							<argument exp='0.5' />
+							<argument exp='::DataRecorder.Find_LowHigh' />
+						</command>
+						<command class_type='comment' title='' comment='Decode the data starting at the first clock pulse
+' textarea='273,-14,273,-14' cmdcolor='5751039' cmdcolor_sec='5751039' />
+						<command class_type='decision' title='If found a valid clock pulse' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.step != 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.TimeOffset = .TimeOffset + .step' />
+									<exp exp='.PacketSize = .PacketSize - .step' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.AddSyncPackets' >
+									<argument exp='.StreamH' />
+									<argument exp='.TimeOffset' />
+									<argument exp='.PacketSize' />
+									<argument exp='ScopeSCL' />
+									<argument exp='::DataRecorder.Find_LowHigh' />
+									<argument exp='0x1ff' />
+									<argument exp='9' />
+									<argument exp='::DataRecorder.Packet_ResyncEv' />
+									<argument exp='-1' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_AddHeader' description='Sent to a component to allow dynamic amendment of header code' statediag='0' >
+						<return name='Return' type='u32' description='Non-zero to block header code insertion' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='HeadCode' type='T8' description='Text to amend for header' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<local name='temp_ul' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='temp_str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='MASTER &gt; 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = &quot;#define MX_MI2C\n&quot;' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(REMAPPABLE &gt; 0) &amp;&amp; (CHANNEL &gt; 0)' swap='0' >
+							<flowline >
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.GetInstance' >
+									<return exp='.temp_ul' />
+									<argument exp='this' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_REMAPPABLE_&quot; + ToString$ (.temp_ul) + &quot; 1\n&quot;' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetListItem' >
+									<return exp='.temp_str' />
+									<argument exp='this' />
+									<argument exp='&quot;SDAReg&quot;' />
+									<argument exp='SDAPins' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SDA_RPOR_&quot; + STRING (.temp_ul) + &quot; &quot; + .temp_str + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SDA_&quot; + STRING (.temp_ul) + &quot; &quot; + STRING SDARPNUM + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SDA_RPINR_&quot; + STRING (.temp_ul) + &quot; &quot; + SDARPREG + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SDA_RP_&quot; + STRING (.temp_ul) + &quot; &quot; + STRING SDAPins + &quot;\n&quot;' />
+								</command>
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetListItem' >
+									<return exp='.temp_str' />
+									<argument exp='this' />
+									<argument exp='&quot;SCLReg&quot;' />
+									<argument exp='SCLPins' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SCL_RPOR_&quot; + STRING (.temp_ul) + &quot; &quot; + .temp_str + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SCL_&quot; + STRING (.temp_ul) + &quot; &quot; + STRING SCLRPNUM + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SCL_RPINR_&quot; + STRING (.temp_ul) + &quot; &quot; + SCLRPREG + &quot;\n&quot;' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.HeadCode = .HeadCode + &quot;#define MX_I2C_SCL_RP_&quot; + STRING (.temp_ul) + &quot; &quot; + STRING SCLPins + &quot;\n&quot;' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_Restart' description='Output a Master Restart sequence' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='&quot;\nMaster_Restart()&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='ConvertPort' description='return a port string from parameters fcd port number and pin' statediag='0' >
+						<return name='Return' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;\x00&quot;' setinit='' />
+						<param name='port' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<param name='pin' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<local name='n' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='p' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.n = StringToInt$ (.port)' />
+						</command>
+						<command class_type='switch' title='Switch' textarea='36,25,36,25' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.n' >
+							<case >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;A&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='1' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;B&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='2' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;C&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='3' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;D&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='4' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;E&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='5' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;F&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='6' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;G&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='7' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;H&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='8' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;J&quot;' />
+									</command>
+								</flowline>
+							</case>
+							<case exp='9' >
+								<flowline >
+									<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+										<exp exp='.p = &quot;K&quot;' />
+									</command>
+								</flowline>
+							</case>
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Return = &quot;$PORT&quot; + .p + &quot;.&quot; + .pin' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Master_RxByte' description='Returns a received data byte.
+Set Last=0 if there is following more Master_RxByte macros
+Set Last=1 if this is the last Master_RxByte and it is followed with Master_Stop.
+If Last = 1 the I2C bus will be presented with a &apos;Nack&apos; condition.' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Last' type='u8' description='Range: 0-1 - 0 = Not the last byte to receive, 1 = last byte to receive' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='str' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.str = &quot;\nMaster_RxByte(&quot; + ToString$ (.Last) + &quot;)&quot;' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Prv_TextConsole' >
+							<argument exp='.str' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='GetList' description='returns Named property List as filter string
+' statediag='0' >
+						<return name='Return' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;\x00&quot;' setinit='' />
+						<param name='Name' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<local name='n' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='s' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='fcd_h' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(Compare$ (.Name,&quot;BAUD_LIST&quot;,1) = 0) OR (Compare$ (.Name,&quot;SMB&quot;,1) = 0) OR (Compare$ (.Name,&quot;SRC&quot;,1) = 0)' swap='0' >
+							<flowline >
+								<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Component.Property.GetFilter' >
+									<return exp='.Return' />
+									<argument exp='this' />
+									<argument exp='.Name' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='Compare$ (.Name,&quot;CHANNEL&quot;,1) = 0' swap='0' >
+									<flowline >
+										<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='GetChannelList' >
+											<return exp='.Return' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='::Component .Property .SetFilter (this,&quot;CHANNEL&quot;, .Return)' />
+										</command>
+										<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='LoadChannelPorts' />
+									</flowline>
+									<flowline >
+										<command class_type='sim' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Debug.PrintLn' >
+											<argument exp='&quot;GetList(&quot; + .Name + &quot;) not valid. Use CHANNEL, BAUD_LIST, SMB or SRC&quot;' />
+										</command>
+									</flowline>
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='d' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='n' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='x' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='16711808' cmdcolor_sec='16711808' macro='Ev_Initialise' />
+						<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='2' port='1048578' mask='24' exp='0xff' usechipref='1' />
+						<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='2' exp='10' >
+							<flowline >
+								<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='2' exp='100' >
+									<flowline />
+								</command>
+								<command class_type='comment' title='' comment='ouput start condition' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+								<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='0' usechipref='1' />
+								<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='0' usechipref='1' />
+								<command class_type='comment' title='' comment='output three bytes' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.x = 0' />
+									<exp exp='.n = &apos;A&apos;' />
+								</command>
+								<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='.x &lt; 3' start='0' >
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.d = .n' />
+											<exp exp='.n = .n + 1' />
+											<exp exp='.x = .x + 1' />
+										</command>
+										<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='2' exp='8' >
+											<flowline >
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='.d &amp; 0x80' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='0' usechipref='1' />
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.d = .d &lt;&lt; 1' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='comment' title='' comment='output the ACK/NAK' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.x &lt; 3' swap='0' >
+											<flowline >
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='0' usechipref='1' />
+											</flowline>
+											<flowline >
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='1' usechipref='1' />
+											</flowline>
+										</command>
+										<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+										<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+										<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='0' usechipref='1' />
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.x = 1' swap='0' >
+											<flowline >
+												<command class_type='comment' title='' comment='insert a RESTART' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='1' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='0' usechipref='1' />
+												<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='0' usechipref='1' />
+											</flowline>
+											<flowline />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='0' usechipref='1' />
+								<command class_type='comment' title='' comment='ouput stop condition' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+								<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='8' exp='1' usechipref='1' />
+								<command class_type='output' title='Output' cmdcolor='8453975' cmdcolor_sec='8453975' mode='1' port='1048578' mask='16' exp='1' usechipref='1' />
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Ev_ResyncPacket' description='Sent when Packet_ResyncEv is specified in scope decoding' statediag='0' >
+						<return name='Return' type='u32' description='Negative to claim the decode and abort the operation else the ticks to step foreward by' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='StreamH' type='h32' description='The scope being decoded' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='TimeOffset' type='s32' description='The -ve offset from now of the current time to be decoded, in microseconds' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Duration' type='u32' description='The maximum number of ticks to decode into packets packet from the TimeOffset' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Period' type='u32' description='The wave period to use for synchronisation' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='ClockH' type='h32' description='A clock stream (if present) to use fr synchronisation' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='PacketFlags' type='u32' description='A set of flags provided by the caller to help decode the stream' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='temp_time' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='clock_high_time' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='clock_low_time' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='data_change_time' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='sample_high' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' >
+							<array size='2' />
+						</local>
+						<local name='sample_low' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' >
+							<array size='2' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.Return = 0' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+							<return exp='.clock_high_time' />
+							<argument exp='ScopeSCL' />
+							<argument exp='.TimeOffset' />
+							<argument exp='.Duration' />
+							<argument exp='0.5' />
+							<argument exp='::DataRecorder.Find_LowHigh' />
+						</command>
+						<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+							<return exp='.clock_low_time' />
+							<argument exp='ScopeSCL' />
+							<argument exp='.TimeOffset + .clock_high_time' />
+							<argument exp='.Duration' />
+							<argument exp='0.5' />
+							<argument exp='::DataRecorder.Find_HighLow' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(.clock_high_time) AND (.clock_low_time)' swap='0' >
+							<flowline >
+								<command class_type='comment' title='' comment='has the SDA changed?' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+								<command class_type='sim' title='Simulation' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+									<return exp='.data_change_time' />
+									<argument exp='ScopeSDA' />
+									<argument exp='.TimeOffset + .clock_high_time' />
+									<argument exp='.clock_low_time' />
+									<argument exp='0.5' />
+									<argument exp='::DataRecorder.Find_HighLow | ::DataRecorder.Find_LowHigh' />
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.data_change_time = 0' swap='0' >
+									<flowline >
+										<command class_type='comment' title='' comment='data SDA has not changed whilst clock SCL was high
+so it must be bit 7 of the next data byte
+continue to process from clock high to low edge' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.Return = .clock_high_time' />
+										</command>
+									</flowline>
+									<flowline >
+										<command class_type='comment' title='' comment='SDA changed
+so we&apos;ve encountered a STOP or RESTART
+
+' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.clock_low_time' swap='0' >
+											<flowline >
+												<command class_type='comment' title='' comment='found a START
+sync to the next MSB' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+												<command class_type='sim' title='Find the next transition' cmdcolor='16711808' cmdcolor_sec='16711808' macro='DataRecorder.FindOutput' >
+													<return exp='.Return' />
+													<argument exp='ScopeSCL' />
+													<argument exp='.TimeOffset + .clock_low_time + .clock_high_time' />
+													<argument exp='.Duration - .clock_low_time + .clock_high_time' />
+													<argument exp='0.5' />
+													<argument exp='::DataRecorder.Find_LowHigh' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.Return = .Return + .clock_high_time + .clock_low_time' />
+												</command>
+											</flowline>
+											<flowline >
+												<command class_type='comment' title='' comment='found a STOP
+skip to the end
+' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.Return = .Duration' />
+												</command>
+											</flowline>
+										</command>
+									</flowline>
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='comment' title='' comment='found a STOP or nothing
+skip to the end
+' textarea='12,0,12,0' cmdcolor='5751039' cmdcolor_sec='5751039' />
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.Return = .Duration' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='ParsePin' description='Parse the pin value from the Port descriptor' statediag='0' >
+						<return name='Return' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Port' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</param>
+						<local name='n' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+							<exp exp='.n = 0' />
+							<exp exp='.Return = 0' />
+						</command>
+						<command class_type='loop' title='Find the dot' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='(.Port[.n] != &apos;.&apos;) AND (.Port[.n] != 0)' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+									<exp exp='.n = .n + 1' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='decision' title='have we found the dot?' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.Port[.n] = 0' swap='1' >
+							<flowline >
+								<command class_type='decision' title='check for high byte' cmdcolor='16734039' cmdcolor_sec='16734039' exp='.Port[.n - 1] = &apos;1&apos;' swap='0' >
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.Return = 8' />
+											<exp exp='.n = .n + 1' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='16734039' cmdcolor_sec='16734039' exp='(.Port[.n] &gt; &apos;0&apos;) AND (.Port[.n] &lt; &apos;8&apos;)' swap='0' >
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.Return = .Return + .Port[.n] - &apos;0&apos;' />
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+									</flowline>
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+											<exp exp='.n = .n + 1' />
+										</command>
+										<command class_type='loop' title='Loop' cmdcolor='16734039' cmdcolor_sec='16734039' type='0' exp='(.Port[.n] &gt;= &apos;0&apos;) AND (.Port[.n] &lt;= &apos;9&apos;)' >
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='49280' cmdcolor_sec='49280' >
+													<exp exp='.Return = (.Return * 10) + .Port[.n] - &apos;0&apos;' />
+													<exp exp='.n = .n + 1' />
+												</command>
+											</flowline>
+										</command>
+									</flowline>
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='fc3c670c-502a-418f-a123-649179752383' vmin='0' vmaj='1' codename='fcdhelper' x='0' y='0.5' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values />
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='2' lighting='0' brightness='0' >
+		<background rgb='9737364' img='' style='0' />
+		<camera xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='128' dy='128' zoom='51.6267' fixtopleft='1' />
+		<page x='1000' y='1000' />
+	</panel2d>
+	<panel3d shadows='0' lighting='0' brightness='0' perspective='1' >
+		<background rgb='32768' img='' style='0' />
+		<table rgb='8404224' img='' style='0' size='0' />
+		<camera xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+	</panel3d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_FmtPacket' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_ResyncPacket' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_DecodeSync' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='ConvertPort' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Slave_Status' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Slave_TxByte' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Slave_RxByte' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Slave_Uninit' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Slave_Init' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='ParsePin' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Master_RxByte' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_AddHeader' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='LoadChannelPorts' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Property_Changed' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='ParseRemapPins' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUQYAAH8DAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+	</layout>
+</document>
+</root>

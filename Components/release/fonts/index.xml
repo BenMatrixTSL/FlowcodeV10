@@ -1,0 +1,100 @@
+<!-- CRC: 7BBB03A15F601D46D9554F5D802A867E7DF6DC9851C64A6A134710615576AF48C3C3E01EE5173ABFA48D9681998C1000D8D10E8D482B7AECD6E1355F35A50E94E99B078663369CE575889CC85ECB73FB87A2666828C53FD8A9B11F738DF98E15A38FEF77E93C3A2A74B6560DD73E9F6102B9AAD90061B9CAC9579DE55574BAC6ED811E7FB8B2F9F9CD79AFDCFCE3315C5674B70DD511CBC624292081230B46319F50E47AEE20F129E1FEA2EF04273B627C3D9BCB4252DCE7086944AE325796A6FB3562C701EC18B42754C48877B9447332EF26609F0E3670699D3FB0243A924976D21B2897729CBF -->
+<!-- REVISION: 14.0 -->
+<!-- GUID: 7A9E8FC4-D390-474E-A9F2-58EB40313688 -->
+<!-- DATE: 12\01\2026 -->
+<!-- DIR: Components\fonts\index.xml -->
+
+
+<fonts>
+<font ix="000" name="Default 8 (Legacy)" />
+<font ix="001" name="Arial 14" />
+<font ix="002" name="Arial Bold 14" />
+<font ix="019" name="Arial 24" />
+<font ix="049" name="Arial Bold 24" />
+<font ix="022" name="Arial 24 (Number Only)" />
+<font ix="020" name="Arial 32" />
+<font ix="050" name="Arial Bold 32" />
+<font ix="023" name="Arial 32 (Number Only)" />
+<font ix="024" name="Arial 39 (Number Only)" />
+<font ix="021" name="Arial 40" />
+<font ix="051" name="Arial Bold 40" />
+<font ix="029" name="Arial Bold 47" />
+<font ix="025" name="Arial 47 (Number Only)" />
+<font ix="028" name="Arial 48" />
+<font ix="045" name="Arial 59" />
+<font ix="052" name="Arial Bold 60" />
+<font ix="046" name="Arial 70" />
+<font ix="053" name="Arial Bold 70" />
+<font ix="047" name="Arial 80" />
+<font ix="054" name="Arial Bold 80" />
+<font ix="048" name="Arial 89" />
+<font ix="031" name="Arial Bold 90" />
+<font ix="055" name="Arial 100" />
+<font ix="056" name="Arial Bold 100" />
+<font ix="057" name="Arial 119" />
+<font ix="058" name="Arial Bold 120" />
+<font ix="059" name="Arial 130" />
+<font ix="060" name="Arial Bold 130" />
+<font ix="061" name="Arial 140" />
+<font ix="083" name="Arial Bold 140" />
+<font ix="084" name="Arial 150" />
+<font ix="085" name="Arial Bold 150" />
+<font ix="086" name="Arial Bold 159" />
+<font ix="033" name="Arial Bold 159 (Number Only)" />
+<font ix="087" name="Arial 160" />
+<font ix="006" name="Calibri 10" />
+<font ix="005" name="Calibri 11" />
+<font ix="007" name="Calibri 14" />
+<font ix="016" name="Calibri Lite 25" />
+<font ix="015" name="Calibri Black 36 (Number Only)" />
+<font ix="088" name="Calibri 37" />
+<font ix="003" name="Corsiva 11" />
+<font ix="081" name="Courier 9" />
+<font ix="082" name="Courier Bold 11" />
+<font ix="035" name="Courier 20" />
+<font ix="036" name="Courier Bold 20" />
+<font ix="037" name="Courier 29" />
+<font ix="038" name="Courier Bold 30" />
+<font ix="039" name="Courier 40" />
+<font ix="040" name="Courier Bold  40" />
+<font ix="041" name="Courier 50" />
+<font ix="042" name="Courier Bold 50" />
+<font ix="044" name="Courier Bold 58" />
+<font ix="043" name="Courier 59" />
+<font ix="062" name="Courier 69" />
+<font ix="063" name="Courier Bold 70" />
+<font ix="064" name="Courier 78" />
+<font ix="065" name="Courier Bold 79" />
+<font ix="066" name="Courier Bold 90" />
+<font ix="032" name="Courier 90" />
+<font ix="067" name="Courier 100" />
+<font ix="068" name="Courier Bold 100" />
+<font ix="069" name="Courier Bold 110" />
+<font ix="070" name="Courier 113" />
+<font ix="071" name="Courier Bold 120" />
+<font ix="072" name="Courier 121" />
+<font ix="073" name="Courier 128" />
+<font ix="074" name="Courier Bold 130" />
+<font ix="075" name="Courier 140" />
+<font ix="076" name="Courier Bold 140" />
+<font ix="077" name="Courier 150" />
+<font ix="078" name="Courier Bold 150" />
+<font ix="079" name="Courier 160" />
+<font ix="080" name="Courier Bold 160" />
+<font ix="089" name="Courier New 16" />
+<font ix="090" name="Courier New 24" />
+<font ix="012" name="Fixed 15 (Number Only)" />
+<font ix="013" name="Fixed 16 (Number Only)" />
+<font ix="011" name="Fixed 31 (Number Only)" />
+<font ix="030" name="Fourteen Segment 48" />
+<font ix="026" name="Seven Segment 24" />
+<font ix="027" name="Seven Segment 32" />
+<font ix="034" name="Seven Segment 89" />
+<font ix="004" name="System 7" />
+<font ix="008" name="Times New Roman 13" />
+<font ix="009" name="Times New Roman 16" />
+<font ix="017" name="Tiny6" />
+<font ix="010" name="Verdana 12" />
+<font ix="014" name="Verdana 24 (Number Only)" />
+<font ix="018" name="Custom" />
+</fonts>

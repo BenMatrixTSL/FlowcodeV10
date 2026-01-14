@@ -1,0 +1,2 @@
+ESP CAN changed to TWAI
+PIC I2C added 18FxxQxx support

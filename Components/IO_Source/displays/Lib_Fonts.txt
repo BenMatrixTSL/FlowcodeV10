@@ -1,0 +1,12 @@
+Character set used to create a builtin font set
+
+Full font
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~° 
+
+
+Full font with no lowercase
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`{|}~° 
+
+
+Number only font
++,-./0123456789:C°F

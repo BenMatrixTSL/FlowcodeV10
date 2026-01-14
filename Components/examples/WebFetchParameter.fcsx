@@ -1,0 +1,524 @@
+<root>
+<document scada='1' panel2DSCADA='0' panel3DSCADA='0' panelPropsSCADA='0' panelConsoleSCADA='0' panelDataRecorderSCADA='0' panel2DCount='1' panel2DSCADA_0='6' playbackSCADA='0' ShouldAutoStartSCADA='0' ShouldLockCameraSCADA='0' ShouldBundleSCADA='1' SCADAProgramTitle='' buildnumber='0' schema='103' license='10,BenR,C9TN1M' title='Blank Web' description='A blank Web App Developer project suitable for creating apps that run in a browser' fcversion='655364' target='SCADA.SCADA.WEBEXP' >
+	<config data='' clkspd='100000000' simspd='1' usewdt='0' constif='0' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='4095' />
+			<data name='ClockPin' value='0' />
+			<data name='DataPort' value='4095' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='2' />
+			<data name='CalculatedCommsDelay' value='2' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='1' center='1' unitscale='0' fixedscale='0' fixedx='1' fixedy='1' fixedz='1' headcode='0' />
+		<definition guid='0bdc2ce7-fe6d-435d-81f3-4795c28b4122' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='1' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='panel' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='ParseArray' description='Parses all elements in the array' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='Value' type='f32' description='The value of the array element' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' />
+						<param name='Index' type='s32' description='The index of the passed value' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Array' type='h32' description='The array itself' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='AddPoint' >
+							<argument exp='.Index' />
+							<argument exp='.Value' />
+							<argument exp='1' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='ProcessResponse' description='Called when a Fetch request returns with data' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<param name='Data' type='h32' description='The data object returned by the Fetch command' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='s' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='comment' title='' comment='Set the text of the txtResponse text block with the data retrieved from the website' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebObject1' macro='ObjectToString' >
+							<return exp='.s' />
+							<argument exp='.Data' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='txtResponse' macro='SetText' >
+							<argument exp='.s' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='0' cmdgradient='4' cmdopacity='0.64' exp='rdoSine::GetState() || rdoTemp::GetState()' swap='0' >
+							<flowline >
+								<command class_type='comment' title='' comment='The data received can be plotted on the chart' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='ClearData' />
+								<command class_type='comment' title='' comment='ArrayParse uses a trick in the WebObject component to make processing an array easier.
+
+This basically replicates the &quot;ForEach&quot; JavaScript function, where the &quot;ParseArray&quot;
+property of the WebObject is called successively for each of the array values in the
+retrieved data.
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Array1' macro='ArrayParse' >
+									<argument exp='.Data' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebChartLine1' macro='Redraw' />
+							</flowline>
+							<flowline />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='OnClickGo' description='Called when the button is clicked' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<local name='state' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='comment' title='' comment='Decide which option is pressed and then launch &quot;Fetch&quot; with the appropriate parameter' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='0' cmdgradient='4' cmdopacity='0.64' exp='rdoFruit::GetState()' swap='0' >
+							<flowline >
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+									<argument exp='&quot;option=fruit&quot;' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='0' cmdgradient='4' cmdopacity='0.64' exp='rdoPets::GetState()' swap='0' >
+									<flowline >
+										<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+											<argument exp='&quot;option=pets&quot;' />
+										</command>
+									</flowline>
+									<flowline >
+										<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='0' cmdgradient='4' cmdopacity='0.64' exp='rdoSine::GetState()' swap='0' >
+											<flowline >
+												<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+													<argument exp='&quot;option=sine&quot;' />
+												</command>
+											</flowline>
+											<flowline >
+												<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='0' cmdgradient='4' cmdopacity='0.64' exp='rdoTemp::GetState()' swap='0' >
+													<flowline >
+														<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+															<argument exp='&quot;option=temp&quot;' />
+														</command>
+													</flowline>
+													<flowline >
+														<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='WebFetch1' macro='Fetch' >
+															<argument exp='&quot;option=unknown&quot;' />
+														</command>
+													</flowline>
+												</command>
+											</flowline>
+										</command>
+									</flowline>
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='comment' title='' comment='This example calls an external webpage and processes the JSON response.  For]
+info, the code below is the actual code of the webpage being accessed.
+
+
+&lt;?php
+
+$option = isset($_GET[&apos;option&apos;]) ? trim($_GET[&apos;option&apos;]) : null;
+
+switch ($option)
+{
+  case &apos;fruit&apos;:
+    $data = [ &apos;apple&apos;, &apos;banana&apos;, &apos;cherry&apos; ];
+    break;
+  
+  case &apos;pets&apos;:
+    $data = [ &apos;cats&apos;, &apos;dogs&apos;, &apos;rabbits&apos; ];
+    break;
+  
+  case &apos;sine&apos;:
+    $data = array();
+    for ($x = 0; $x &lt;= 2*pi(); $x+=pi()/20.0)
+    {
+      array_push($data, sin($x));
+    }
+    break;
+    
+  case &apos;temp&apos;:
+    $data = [8.4,5.9,11,11.2,10.4,10.3,10.5,6.4,5.9,11.5,7.2,10,6.6,8.3,6.1,1.4,1.6,3.4,2.7,4.4,2.1,3.2,5.5,7.1,7.6,6.2,5.6,5.8,7.9,7.5,7.8,7.3,8.8,9.5,9.1,6.4,6.2,8,6.5,6.8,8.3,9,8.3,7.8,11.8,9.2,10.2,11.1,10.5,9.2,10.6,9.3,7.4,6.6,8.7,5.5,6.5,7.1,6.8,7,6.1,6.7,6.5,5.4,6.3,4,2.5,1.3,1.7,2.1,9.7,10.6,4.5,5.7,10.8,12.8,12.3,9.2,12.2,12.2,12,11.7,11.3,9.4,6.7,7.8,8.5,11.9,12.5,9.9,8.6,8.7,9.3,11.3,8.3,10.3,12,12.3,12.8,12,11.5,7,8.8,8.2,11.5,11.8,13.5,12.8,12,11.8,10.4,11.5,10.7,7.7,9,10.6,11.3,11.5,13.6,12.4,14.2,11.6,12.6,11.9,16.4,16,17.5,13.8,15.5,14.4,14.7,12.9,15.5,16.7,12.8,13,14.3,16.7,14.5,16.1,17.4,18.4,16.6,16.6,17.3,17.2,19.3,14.8,15.4,15.5,14.9,14.6,15.7,16.9,16.8,15.9,14.7,14.6,15.1,17.7,24.6,25.3,25.9,24.4,22,22.9,23.8,21.1,22.8,21,18,20.5,21.8,21.5,23.9,25.2,17.6,18.1,20.6,17];
+    break;
+    
+  default:
+    //$data = [];
+}
+
+if (isset($data))
+{
+  header(&apos;Content-type: application/json&apos;);
+  echo json_encode( $data );
+}
+else
+{
+  http_response_code(500);
+  echo &quot;Bad option: &quot; . $option;
+  echo &quot;&lt;br&gt;&quot;;
+  echo &quot;&lt;br&gt;&quot;;
+  echo &quot;Supported options are fruit/pets/sine/temp&quot;;
+}
+
+?&gt;
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='comment' title='' comment='Interesting features of the program to note:
+
+  * Radio Button &apos;Group Name&apos; property allows grouping
+  * Fetch initiated using &apos;Fetch&apos; macro using custom parameters send to the Fetch URL
+  * This data is example JSON data sent from the Flowcode website
+  * Returned data is processed using the macro identified in the Fetch component property
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='comment' title='' comment='The process:
+
+  1) Button Click inspects Radio Buttons and initiates appropriate Fetch action
+  2) When data is received, Fetch component&apos;s &apos;Call Macro&apos; property is called
+  3) This JSON data is converted to a string using the Object Helper component and displayed in the TextBlock component
+  4) If appropriate graph data, this data is plotted (in this case, the data is an array of values)
+  5) To make parsing an array of data easier,t eh Object Helper has a &apos;ParseArray&apos; macro which is called for each element of the array
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoFruit' panelId='0' x='145' y='-30' z='0' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='1' />
+					<value target='sLabel' data='Fruit' />
+					<value target='sGroupName' data='GroupName' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoPets' panelId='0' x='145' y='-60' z='1' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='Pets' />
+					<value target='sGroupName' data='GroupName' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoSine' panelId='0' x='145' y='-90' z='2' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='Sine graph' />
+					<value target='sGroupName' data='GroupName' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoTemp' panelId='0' x='145' y='-120' z='3' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='Temperature in Halifax, UK' />
+					<value target='sGroupName' data='GroupName' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='c68e35f2-92e3-4a48-abd9-4a1818aa1023' vmin='1' vmaj='0' codename='WebButton1' panelId='0' x='106' y='-196' z='4' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sText' data='Go' />
+					<value target='Caption::nHorizontalAlignment' data='2' />
+					<value target='Caption::fntFamily' data='Calibri' />
+					<value target='Caption::iFontSize' data='16' />
+					<value target='Caption::colTextColour' data='0' />
+					<value target='Caption::bBold' data='0' />
+					<value target='Caption::bItalic' data='0' />
+					<value target='Caption::bUnderline' data='0' />
+					<value target='Caption::bStrikethrough' data='0' />
+					<value target='Button::colFill' data='13816530' />
+					<value target='iStyle' data='000' />
+					<value target='Button::iOutlineSize' data='0' />
+					<value target='Button::colOutline' data='0' />
+					<value target='bShadow' data='1' />
+					<value target='Shadow::colFill' data='7895160' />
+					<value target='macroOnClick' data='OnClickGo' />
+					<value target='sCursor' data='024' />
+					<value target='bShowPress' data='1' />
+					<value target='bAutoColour' data='1' />
+					<value target='colHover' data='5724159' />
+					<value target='colClick' data='5921370' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='3bd55a33-d9ed-44a0-80d9-76a8d954a335' vmin='1' vmaj='0' codename='txtResponse' panelId='0' x='210' y='-455' z='5' xsz='25' ysz='70.3125' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='GdiText1::sText' data='Choose an option and press &quot;Go&quot;' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='iFontSize' data='12' />
+					<value target='GdiText1::iFontSize' data='12' />
+					<value target='GdiText1::nHorizontalAlignment' data='  0' />
+					<value target='GdiText1::bWordWrap' data='1' />
+					<value target='bHideOverflow' data='0' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='name=&apos;txtResponse&apos; style=&apos;word-wrap:break-word;&apos;' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='724dc5b4-8519-41ff-a96d-413275961305' vmin='1' vmaj='0' codename='WebChartLine1' panelId='0' x='558.5' y='-244' z='6' xsz='30.3049' ysz='40.3448' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='BaseChart1::sTitle' data='Response' />
+					<value target='nStackType' data='000' />
+					<value target='iLegend' data='002' />
+					<value target='nStyle' data='000' />
+					<value target='custcolFill' data='16711935' />
+					<value target='custcolOutline' data='12582912' />
+					<value target='custcolPlot' data='65535' />
+					<value target='custcolLine' data='10526975' />
+					<value target='custcolText' data='65298' />
+					<value target='custcolSeries1' data='16777215' />
+					<value target='custcolSeries2' data='13998939' />
+					<value target='custcolSeries3' data='49407' />
+					<value target='custcolSeries4' data='255' />
+					<value target='custcolSeries5' data='12583040' />
+					<value target='BaseChart1::sXName' data='X-axis' />
+					<value target='BaseChart1::bXAuto' data='1' />
+					<value target='BaseChart1::dXStart' data='0' />
+					<value target='BaseChart1::dXEnd' data='100' />
+					<value target='BaseChart1::bXLogarithmic' data='0' />
+					<value target='BaseChart1::bXScalable' data='0' />
+					<value target='BaseChart1::sYName' data='Y-axis' />
+					<value target='BaseChart1::bYAuto' data='1' />
+					<value target='BaseChart1::dYStart' data='0' />
+					<value target='BaseChart1::dYEnd' data='100' />
+					<value target='BaseChart1::bYLogarithmic' data='0' />
+					<value target='BaseChart1::bYScalable' data='0' />
+					<value target='sCustomAttributes' data='' />
+					<value target='sCustomOptions' data='' />
+					<value target='iSeriesCount' data='001' />
+					<value target='BaseChart1::sSeriesName1' data='Series 1' />
+					<value target='BaseChart1::sSeriesName2' data='Series 2' />
+					<value target='BaseChart1::sSeriesName3' data='Series 3' />
+					<value target='BaseChart1::sSeriesName4' data='Series 4' />
+					<value target='BaseChart1::sSeriesName5' data='Series 5' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='209c214a-3fdf-4a09-9354-e2f146dbdedc' vmin='1' vmaj='0' codename='WebFetch1' panelId='0' x='550' y='-570' z='7' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='sUrl' data='https://flowcode.co.uk/example/get_data.php' />
+					<value target='macProcess' data='ProcessResponse' />
+					<value target='DataType' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='2e5d477d-7e43-4691-95e1-becf96fed02d' vmin='1' vmaj='0' codename='WebObject1' panelId='0' x='650' y='-570' z='8' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values />
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='1aadf780-b159-4970-8c1a-6af1ec49335b' vmin='1' vmaj='0' codename='rdoUnknown' panelId='0' x='145' y='-150' z='9' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='bState' data='0' />
+					<value target='sLabel' data='Unknown parameter' />
+					<value target='sGroupName' data='GroupName' />
+					<value target='macroOnClick' data='' />
+					<value target='GdiText1::fntFamily' data='Arial' />
+					<value target='GdiText1::iFontSize' data='16' />
+					<value target='GdiText1::bBold' data='0' />
+					<value target='GdiText1::bItalic' data='0' />
+					<value target='GdiText1::bUnderline' data='0' />
+					<value target='GdiText1::bStrikethrough' data='0' />
+					<value target='GdiText1::colTextColour' data='0' />
+					<value target='GdiText1::colBackgroundColour' data='-1' />
+					<value target='sCustomAttributes' data='' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='a1612734-3758-43e9-b5f1-2b1a35304d19' vmin='1' vmaj='0' codename='Array1' panelId='0' x='440' y='-570' z='10' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='macForEach' data='ParseArray' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='461.585' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='413' dy='396' zoom='108.264' fix_topleft='0' />
+		<page x='1000' y='1000' show='1' rgb='16777215' />
+		<winpos ID='7005' RectRecentFloat='476,78,1930,1080' RectRecentDocked='0,0,413,419' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='607,298,1930,1080' RectRecentDocked='0,0,250,870' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='2D Panel' >
+			<winpos ID='1171' RectRecentFloat='100,227,1150,1080' RectRecentDocked='863,141,1399,1021' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAKwQAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='OnClickGo' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAKwQAAGsDAAA' zoom='100' scrollx='961' scrolly='2' flags='0' />
+		<view type='0' name='ProcessResponse' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAKwQAAGsDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='ParseArray' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAKwQAAGsDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+	</layout>
+</document>
+</root>
