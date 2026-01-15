@@ -62,6 +62,7 @@
 		<pin name='D2' port='3' bit='2' rpreg='42' rpnum='42' caption="GPIO42" />
 		<pin name='D3' port='3' bit='3' rpreg='46' rpnum='46' caption="GPIO46" />	
 		<pin name='D4 BOOT0' port='3' bit='4' rpreg='0' rpnum='0' caption="GPIO0" />
+		<pin name='N/C' />
     </pins>
     
     <biasresistors allpins='1' mode='3' >
