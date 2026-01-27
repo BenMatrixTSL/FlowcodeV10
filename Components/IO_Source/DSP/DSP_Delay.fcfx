@@ -1,5 +1,5 @@
 <root>
-<document scada='0' schema='103' license='10,BenR,C9TN1M' title='' description='' fcversion='655363' target='PIC.16F.16F877A' >
+<document scada='0' schema='103' license='10,BenR,C9TN1M' title='' description='' fcversion='655618' target='PIC.16F.16F877A' >
 	<config data='!0,3f72%0,2%2,0%3,0%6,1%7,0%9,3%b,1%8,1%d,1' clkspd='19660800' simspd='1' usewdt='0' constif='0' Use3V3='0' />
 	<plugins >
 		<dll_models enabled='1' />
@@ -98,14 +98,14 @@
 				<value target='BuffTypeIn' data='0' />
 			</values>
 			<events >
-				<event class='Simulation' event='Start' target='Ev_Start' />
-				<event class='Components' event='Property' target='Ev_Property' />
-				<event class='System' event='Timer' target='Ev_Timer' />
-				<event class='Compile' event='AddVar' target='Ev_AddVar' />
-				<event class='Compile' event='GetVarSize' target='Ev_GetVarSize' />
-				<event class='Components' event='Resize' target='Ev_Resize' />
 				<event class='System' event='LoadComplete' target='Ev_LoadComplete' />
 				<event class='Components' event='Initialise' target='Ev_Initialise' />
+				<event class='Components' event='Resize' target='Ev_Resize' />
+				<event class='System' event='Timer' target='Ev_Timer' />
+				<event class='Components' event='Property' target='Ev_Property' />
+				<event class='Simulation' event='Start' target='Ev_Start' />
+				<event class='Compile' event='GetVarSize' target='Ev_GetVarSize' />
+				<event class='Compile' event='AddVar' target='Ev_AddVar' />
 			</events>
 			<apis >
 				<api name='DelayArray' alt='DelayArray' type='1' proto='1' />
@@ -337,6 +337,9 @@
 						<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='(.Idx &lt; BuffSizeIn) &amp;&amp; (.Idx &lt; BuffSize)' >
 							<flowline >
 								<command class_type='call' title='User Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Delay' />
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='.Idx = .Idx + 1' />
+								</command>
 							</flowline>
 						</command>
 					</flowline>
@@ -705,6 +708,7 @@
 					<value target='Connection1::fLineThickness' data='2.100000' />
 					<value target='Connection1::colOutline' data='0' />
 					<value target='Loading' data='0' />
+					<value target='TimerRetry' data='0' />
 				</values>
 				<events />
 				<apis />
@@ -724,7 +728,7 @@
 					<value target='BuffType' data='0' />
 					<value target='DRTrace' data='1' />
 					<value target='DRTOld' data='1' />
-					<value target='Console' data='2147' />
+					<value target='Console' data='67' />
 					<value target='ConsoleSize' data='17' />
 					<value target='Text' data='Out' />
 					<value target='Orientation' data='0' />
@@ -745,14 +749,23 @@
 				<properties />
 				<values >
 					<value target='nType' data='  3' />
+					<value target='iSubStyle' data='0' />
+					<value target='iRounding' data='25' />
 					<value target='colFill' data='16777215' />
 					<value target='colFillGradient' data='16777215' />
 					<value target='nGradientStyle' data='0' />
+					<value target='nFillOpacity' data='1.0' />
 					<value target='nStyle' data='0' />
+					<value target='bFixedScale' data='0' />
 					<value target='fThickness' data='1.00000' />
+					<value target='iOutlineSize' data='1' />
 					<value target='colOutline' data='0' />
 					<value target='colOutlineGradient' data='0' />
 					<value target='nOutlineStyle' data='0' />
+					<value target='nOutlineOpacity' data='1.0' />
+					<value target='bTooltipEnable' data='0' />
+					<value target='sTooltipText' data='' />
+					<value target='sTooltipDesc' data='' />
 				</values>
 				<events />
 				<apis />
@@ -771,8 +784,10 @@ Samples' />
 					<value target='nVerticalAlignment' data='2' />
 					<value target='nAngle' data='0' />
 					<value target='fntFamily' data='Calibri' />
+					<value target='bFixedScale' data='0' />
 					<value target='dScale' data='0.500000' />
 					<value target='bScaleWidth' data='0' />
+					<value target='iFontSize' data='12' />
 					<value target='bBold' data='0' />
 					<value target='bItalic' data='0' />
 					<value target='bUnderline' data='0' />
@@ -780,9 +795,11 @@ Samples' />
 					<value target='colTextColour' data='0' />
 					<value target='colTextGradient' data='9868950' />
 					<value target='nGradient' data='0' />
+					<value target='nTextOpacity' data='1.0' />
 					<value target='colBackgroundColour' data='-1' />
 					<value target='colBackgroundGradient' data='-1' />
 					<value target='nBackgroundGradient' data='0' />
+					<value target='nBackgroundOpacity' data='1.0' />
 				</values>
 				<events />
 				<apis />
@@ -794,14 +811,23 @@ Samples' />
 				<properties />
 				<values >
 					<value target='nType' data='  0' />
+					<value target='iSubStyle' data='0' />
+					<value target='iRounding' data='25' />
 					<value target='colFill' data='3552822' />
 					<value target='colFillGradient' data='16777215' />
 					<value target='nGradientStyle' data='0' />
+					<value target='nFillOpacity' data='1.0' />
 					<value target='nStyle' data='0' />
+					<value target='bFixedScale' data='0' />
 					<value target='fThickness' data='1.00000' />
+					<value target='iOutlineSize' data='1' />
 					<value target='colOutline' data='7895160' />
 					<value target='colOutlineGradient' data='16777215' />
 					<value target='nOutlineStyle' data='  3' />
+					<value target='nOutlineOpacity' data='1.0' />
+					<value target='bTooltipEnable' data='0' />
+					<value target='sTooltipText' data='' />
+					<value target='sTooltipDesc' data='' />
 				</values>
 				<events />
 				<apis />
@@ -818,8 +844,10 @@ Samples' />
 					<value target='nVerticalAlignment' data='2' />
 					<value target='nAngle' data='0' />
 					<value target='fntFamily' data='Calibri' />
+					<value target='bFixedScale' data='0' />
 					<value target='dScale' data='1.6' />
 					<value target='bScaleWidth' data='1' />
+					<value target='iFontSize' data='12' />
 					<value target='bBold' data='0' />
 					<value target='bItalic' data='0' />
 					<value target='bUnderline' data='0' />
@@ -827,9 +855,11 @@ Samples' />
 					<value target='colTextColour' data='16777215' />
 					<value target='colTextGradient' data='9868950' />
 					<value target='nGradient' data='0' />
+					<value target='nTextOpacity' data='1.0' />
 					<value target='colBackgroundColour' data='-1' />
 					<value target='colBackgroundGradient' data='-1' />
 					<value target='nBackgroundGradient' data='0' />
+					<value target='nBackgroundOpacity' data='1.0' />
 				</values>
 				<events />
 				<apis />
@@ -845,7 +875,7 @@ Samples' />
 		<camera xe='2.68548' ye='-0.418587' ze='171.256' xt='2.68548' yt='-0.418587' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
 		<viewport dx='242' dy='205' zoom='170.984' fix_topleft='0' />
 		<page x='1000' y='1000' show='0' rgb='0' />
-		<winpos ID='7005' RectRecentFloat='1075,-496,1345,-193' RectRecentDocked='801,141,1245,983' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+		<winpos ID='7005' RectRecentFloat='1075,-496,1345,-193' RectRecentDocked='915,141,1434,1013' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
 	</panel2d>
 	<panel3d shadows='0' lighting='0' brightness='0' perspective='1' >
 		<background rgb='8409120' img='' style='0' />
@@ -858,23 +888,23 @@ Samples' />
 		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
 		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
 		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
-		<winpos ID='7004' RectRecentFloat='927,365,1413,740' RectRecentDocked='0,0,219,872' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+		<winpos ID='7004' RectRecentFloat='927,365,1413,740' RectRecentDocked='0,0,257,566' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
 	</panel3d>
 	<panels2d count='0' />
 	<layout >
-		<view type='0' name='Delay' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_AddVar' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Property' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='60' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='DelayArray' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_GetVarSize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='PresetDelay' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Start' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='SetDelaySize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Resize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_LoadComplete' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Timer' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAdAMAAEUDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Delay' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_AddVar' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Property' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='60' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='DelayArray' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_GetVarSize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='PresetDelay' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Start' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='SetDelaySize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Resize' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_LoadComplete' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Timer' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAACgQAAGMDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
 	</layout>
 </document>
 </root>
