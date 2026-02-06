@@ -1,5 +1,5 @@
 <root>
-<document scada='0' schema='103' license='1,CompMaker,PWKUUN' title='' description='' fcversion='655360' target='PIC.16F.16F1789' >
+<document scada='0' schema='103' license='10,BenR,C9TN1M' title='' description='' fcversion='655618' target='PIC.16F.16F1789' >
 	<config data='!0,7c2!10,1633%0,2%3,0%5,0%6,1%7,1%8,1%9,3%b,0%c,0%d,0%10,3%15,1%18,0%19,1%1a,1%1b,0%1c,1%1d,0' clkspd='19660800' simspd='1' usewdt='0' constif='1' Use3V3='0' />
 	<plugins >
 		<dll_models enabled='1' />
@@ -117,13 +117,13 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 				<value target='RxIdleThresh' data='2' />
 			</values>
 			<events >
-				<event class='Compile' event='AddProperty' target='Ev_AddProperty' />
-				<event class='Connection' event='FCDChange' target='Ev_ChipChange' />
-				<event class='Connection' event='ChipChange' target='Ev_ChipChange' />
+				<event class='Components' event='Property' target='Ev_Property_Change' />
 				<event class='Compile' event='AddHeader' target='Ev_AddHeader' />
 				<event class='Components' event='Initialise' target='Ev_Initialise' />
-				<event class='Components' event='Property' target='Ev_Property_Change' />
 				<event class='Components' event='Renamed' target='Ev_Renamed' />
+				<event class='Connection' event='FCDChange' target='Ev_ChipChange' />
+				<event class='Compile' event='AddProperty' target='Ev_AddProperty' />
+				<event class='Connection' event='ChipChange' target='Ev_ChipChange' />
 			</events>
 			<apis >
 				<api name='TransmitBusy' alt='FC_CAL_RMT_TXBusy_$(instance)' type='5' proto='1' />
@@ -141,11 +141,11 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 						</local>
 						<local name='ObjectHandle' type='h32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='Temp' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='sim' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.GetInstance' >
+						<command class_type='sim' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.GetInstance' >
 							<return exp='.Temp' />
 							<argument exp='this' />
 						</command>
-						<command class_type='sim' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetValue' >
+						<command class_type='sim' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetValue' >
 							<argument exp='this' />
 							<argument exp='&quot;instance&quot;' />
 							<argument exp='.temp' />
@@ -155,29 +155,29 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 				<macro >
 					<flowline name='Ev_Property_Change' description='Sent when a property has been changed by the User' statediag='0' >
 						<return name='Return' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Mode' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Mode' swap='0' >
 							<flowline >
-								<command class_type='comment' title='' comment='RX' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
-								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+								<command class_type='comment' title='' comment='RX' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
+								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 									<argument exp='this' />
 									<argument exp='&quot;property_1&quot;' />
 									<argument exp='0' />
 								</command>
-								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 									<argument exp='this' />
 									<argument exp='&quot;property_2&quot;' />
 									<argument exp='1' />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='RxFilterEn' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='RxFilterEn' swap='0' >
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;RxFilterTicks&quot;' />
 											<argument exp='1' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;RxFilterTicks&quot;' />
 											<argument exp='0' />
@@ -186,63 +186,63 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='comment' title='' comment='TX' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
-								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+								<command class_type='comment' title='' comment='TX' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
+								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 									<argument exp='this' />
 									<argument exp='&quot;property_1&quot;' />
 									<argument exp='1' />
 								</command>
-								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 									<argument exp='this' />
 									<argument exp='&quot;property_2&quot;' />
 									<argument exp='0' />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='TxCarrierEn' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='TxCarrierEn' swap='0' >
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierFreq&quot;' />
 											<argument exp='1' />
 										</command>
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierDuty&quot;' />
 											<argument exp='1' />
 										</command>
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierLevel&quot;' />
 											<argument exp='1' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierFreq&quot;' />
 											<argument exp='0' />
 										</command>
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierDuty&quot;' />
 											<argument exp='0' />
 										</command>
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxCarrierLevel&quot;' />
 											<argument exp='0' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='TxIdleOutput' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='TxIdleOutput' swap='0' >
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxIdleLevel&quot;' />
 											<argument exp='1' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
 											<argument exp='this' />
 											<argument exp='&quot;TxIdleLevel&quot;' />
 											<argument exp='0' />
@@ -266,150 +266,150 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 							<array size='20' />
 						</local>
 						<local name='Num' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 							<exp exp='.Return = 1' />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;Mode&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;Mode&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Mode' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Mode' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;RMT_MODE_RX&quot;' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;RMT_MODE_TX&quot;' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_MODE_&quot; + STRING Instance + &quot; &quot; + .str + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;Pin&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;Pin&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.GetValue' >
+								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.GetValue' >
 									<return exp='.str' />
 									<argument exp='this' />
 									<argument exp='&quot;Pin&quot;' />
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Num = .str[7] - &apos;0&apos;' />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.str[8] &gt; 0' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.str[8] &gt; 0' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.Num = .Num * 10' />
 											<exp exp='.Num = .Num + (.str[8] - &apos;0&apos;)' />
 										</command>
 									</flowline>
 									<flowline />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.str[5] = &apos;B&apos;' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.str[5] = &apos;B&apos;' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.Num = .Num + 32' />
 											<exp exp='' />
 										</command>
 									</flowline>
 									<flowline />
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_PIN_&quot; + STRING Instance + &quot; &quot; + STRING .Num + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;MemBlockNum&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;MemBlockNum&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_MEMBLKNUM_&quot; + STRING Instance + &quot; &quot; + STRING MemBlockNum + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;ClkDiv&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;ClkDiv&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_CLKDIV_&quot; + STRING Instance + &quot; &quot; + STRING ClkDiv + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;TxLoopEn&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;TxLoopEn&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='TxLoopEn' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='TxLoopEn' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;true&quot;' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;false&quot;' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_TXLOOPEN_&quot; + STRING Instance + &quot; &quot; + .str + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;TxCarrierEn&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;TxCarrierEn&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='TxCarrierEn' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='TxCarrierEn' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;true&quot;' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;false&quot;' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_TXCARRIEREN_&quot; + STRING Instance + &quot; &quot; + .str + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;TxIdleOutput&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;TxIdleOutput&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='TxIdleOutput' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='TxIdleOutput' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;true&quot;' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 											<exp exp='.str = &quot;false&quot;' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_TXIDLEEN_&quot; + STRING Instance + &quot; &quot; + .str + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;TxIdleLevel&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;TxIdleLevel&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_TXIDLELVL_&quot; + STRING Instance + &quot; &quot; + STRING TxIdleLevel + &quot;\n&quot;' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$ (.PropName,&quot;BuffSize&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.PropName,&quot;BuffSize&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 									<exp exp='.Expansion = &quot;#define MX_RMT_BUFFSZ_&quot; + STRING Instance + &quot; &quot; + STRING BuffSize + &quot;\n&quot;' />
 								</command>
 							</flowline>
@@ -428,7 +428,7 @@ Pulses longer then this period will not be received.' expansion='MX_RMT_IDLETHRE
 						<param name='Target' type='T8' description='The name of the new target device' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
 							<array size='20' />
 						</param>
-						<command class_type='call' title='User Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Ev_Initialise' />
+						<command class_type='call' title='User Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Ev_Initialise' />
 					</flowline>
 				</macro>
 				<macro >
@@ -453,11 +453,11 @@ Returns 1 if transmitting and 0 if transmission is complete.' statediag='0' >
 						<local name='Name' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
 							<array size='20' />
 						</local>
-						<command class_type='sim' title='' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Tree.GetName' >
+						<command class_type='sim' title='' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Tree.GetName' >
 							<return exp='.Name' />
 							<argument exp='this' />
 						</command>
-						<command class_type='sim' title='' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetValue' >
+						<command class_type='sim' title='' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetValue' >
 							<argument exp='LibraryComponent1' />
 							<argument exp='&quot;Name&quot;' />
 							<argument exp='.Name' />
@@ -476,12 +476,66 @@ Returns 1 if transmitting and 0 if transmission is complete.' statediag='0' >
 						<param name='HeadCode' type='T8*' description='Text to amend for header' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
 							<array size='20' />
 						</param>
-						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+						<local name='Calc' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<local name='PinSTring' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<local name='TempStr' type='T8' description='' isconst='0' isHidden='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='20' />
+						</local>
+						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 							<exp exp='.Return = 0' />
 						</command>
-						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
 							<exp exp='.HeadCode = .HeadCode + &quot;\n#ifdef MX_CAL_ESP32\n  #define FC_CAL_RMT_SetBuffer_&quot; + ToString$ (Instance) + &quot;(Idx, St0, Len0, St1, Len1) &quot;' />
 							<exp exp='.HeadCode = .HeadCode + &quot;MX_RMT_BUFFER_&quot; + ToString$ (Instance) + &quot;[Idx] = (rmt_item32_t){{{Len0, St0, Len1, St1}}}\n#endif\n&quot;' />
+						</command>
+						<command class_type='comment' title='' comment='Add a workarounf for E-blocks 8-bit ports' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
+						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.GetValue' >
+							<return exp='.PinSTring' />
+							<argument exp='this' />
+							<argument exp='&quot;Pin&quot;' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+							<exp exp='.TempStr = Left$(.PinSTring,5)' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$(.TempStr,&quot;$PORT&quot;,0) == 0' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculate pin for 8-bit E-blocks type ports' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+									<exp exp='.Calc = (.PinSTring[5] - &apos;A&apos;) * 8' />
+									<exp exp='.Calc = .Calc + (.PinSTring[7] - &apos;0&apos;)' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+									<exp exp='.HeadCode = .HeadCode + &quot;\n#if defined(MX_BL0058_PINMAP) || defined(MX_BL6390_PINMAP)\n&quot;' />
+									<exp exp='.HeadCode = .HeadCode + &quot;  #undef MX_RMT_PIN_&quot; + ToString$(Instance) + &quot;\n&quot;' />
+									<exp exp='.HeadCode = .HeadCode + &quot;  #define MX_RMT_PIN_&quot; + ToString$(Instance) + &quot; &quot; + ToString$(.Calc) + &quot;\n&quot;' />
+									<exp exp='.HeadCode = .HeadCode + &quot;#endif\n&quot;' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$(.TempStr,&quot;$GPIO&quot;,0) == 0' swap='0' >
+									<flowline >
+										<command class_type='calculation' title='Calculate pin for 32-bit GPIO type ports' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+											<exp exp='.Calc = (.PinSTring[5] - &apos;0&apos;)' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Length$(.PinSTring) &gt; 6' swap='0' >
+											<flowline >
+												<command class_type='calculation' title='Calculate pin for 32-bit GPIO type ports' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+													<exp exp='.Calc = .Calc * 10' />
+													<exp exp='.Calc = .Calc + (.PinSTring[6] - &apos;0&apos;)' />
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+											<exp exp='.HeadCode = .HeadCode + &quot;#undef MX_RMT_PIN_&quot; + ToString$(Instance) + &quot;\n&quot;' />
+											<exp exp='.HeadCode = .HeadCode + &quot;#define MX_RMT_PIN_&quot; + ToString$(Instance) + &quot; &quot; + ToString$(.Calc) + &quot;\n&quot;' />
+											<exp exp='' />
+										</command>
+									</flowline>
+									<flowline />
+								</command>
+							</flowline>
 						</command>
 					</flowline>
 				</macro>
@@ -513,6 +567,7 @@ RMT' />
 					<value target='IconsOnRight' data='0' />
 					<value target='OutputIcon::CommsType' data='255' />
 					<value target='OutputIcon::LinkTo' data='0' />
+					<value target='InputIcon1::CommsType' data='255' />
 					<value target='ConsoleHandle' data='0' />
 					<value target='Upgraded' data='0' />
 				</values>
@@ -528,9 +583,9 @@ RMT' />
 	<panel2d shadows='2' lighting='0' brightness='0' >
 		<background rgb='9737364' img='' style='0' />
 		<camera xe='17.568' ye='-10.3144' ze='314.573' xt='17.568' yt='-10.3144' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
-		<viewport dx='622' dy='343' zoom='239.251' fix_topleft='0' />
+		<viewport dx='622' dy='352' zoom='239.251' fix_topleft='0' />
 		<page x='1000' y='1000' show='0' rgb='0' />
-		<winpos ID='7005' RectRecentFloat='1270,427,1920,877' RectRecentDocked='0,0,642,413' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+		<winpos ID='7005' RectRecentFloat='1270,427,1920,877' RectRecentDocked='3201,454,3843,873' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
 	</panel2d>
 	<panel3d shadows='0' lighting='0' brightness='0' perspective='1' >
 		<background rgb='32768' img='' style='0' />
@@ -543,21 +598,21 @@ RMT' />
 		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
 		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
 		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
-		<winpos ID='7004' RectRecentFloat='0,425,654,1002' RectRecentDocked='48,5496,690,5909' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+		<winpos ID='7004' RectRecentFloat='0,425,654,1002' RectRecentDocked='0,0,285,872' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
 	</panel3d>
 	<panels2d count='0' />
 	<layout >
-		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_ChipChange' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Property_Change' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_AddProperty' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Transmit' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Receive' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='SetBuffer' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_AddHeader' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='TransmitBusy' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAABoCAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_ChipChange' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Property_Change' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_AddProperty' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Transmit' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Receive' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='SetBuffer' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_AddHeader' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='TransmitBusy' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAfAQAADECAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
 	</layout>
 </document>
 </root>
