@@ -24,5 +24,5 @@ mIO_Source/switch
 mIO_Source/timer
 mIO_Source/tools
 mnonrelease
-mrelease
+rrelease
 mrelease/fonts
