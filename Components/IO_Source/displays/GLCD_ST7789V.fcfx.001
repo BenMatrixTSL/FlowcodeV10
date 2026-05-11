@@ -2481,22 +2481,6 @@ Useful when used with the FastPlot function to draw bitmaps at high speed.' stat
 							<array size='20' />
 						</param>
 						<param name='Elements' type='u32*' description='The number of elements in the array' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
-							<exp exp='.Return = 1' />
-						</command>
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='QueueFastPixels = 1' swap='0' >
-							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$ (.VarName,&quot;PixelBuffer&quot;,0) == 0' swap='0' >
-									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
-											<exp exp='.Elements = (PixelQueueSize * 2)' />
-										</command>
-									</flowline>
-									<flowline />
-								</command>
-							</flowline>
-							<flowline />
-						</command>
 					</flowline>
 				</macro>
 				<macro >
