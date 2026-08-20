@@ -60,7 +60,7 @@
 	</ghost>
 	<components >
 		<settings autoimg='0' center='1' unitscale='1' fixedscale='0' fixedx='0' fixedy='0' fixedz='0' headcode='0' />
-		<definition guid='e6bd0a57-6bf2-42bb-b05e-6b6cdad2ce0e' vstate='40' vmin='4' vmaj='4' srcleaf='TM1637_7SEG_Quad_Driver_2dgi.fcfx' visiblename='7Segment (Quad TM1637)' description='Quad seven segment display using an two pin communications bus to reduce the number of control pins.
+		<definition guid='e6bd0a57-6bf2-42bb-b05e-6b6cdad2ce0e' vstate='40' vmin='0' vmaj='5' srcleaf='TM1637_7SEG_Quad_Driver_2dgi.fcfx' visiblename='7Segment (Quad TM1637)' description='Quad seven segment display using an two pin communications bus to reduce the number of control pins.
 Driven using a TM1637 quad 7-segment display driver.' category='Segment' category2='' category3='' bIs2dOnly='1' bIs3dOnly='0' catenable='1' author='Matrix Ltd' manuname='MCI Electronics' manucode='' sysinfo='1053451' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' showmacros='1' iconpath='..\..\icons\components\IC7segment.png' />
 		<component class_type='root' codename='TM1637_Display_2dgdi' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
 			<resources />
@@ -579,33 +579,21 @@ Common Cathode:  Pin true -&gt; LED On,  Pin false -&gt; LED Off' filter='000Ano
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<param name='Brightness' type='u8' description='Range: 0-7 - 0=Darkest, 7=Brightest' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<param name='On' type='b1' description='0 = Display Off, 1 = Display On' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='decision' title='In Range?' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Brightness &lt; 8' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Update Brightness Control Variable' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='Brightness = 0x80 | .Brightness' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
 						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.On' swap='0' >
 							<flowline >
-								<command class_type='decision' title='In Range?' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Brightness &lt; 8' swap='0' >
-									<flowline >
-										<command class_type='calculation' title='Update Brightness Control Variable' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
-											<exp exp='Brightness = 0x80 | .Brightness' />
-										</command>
-									</flowline>
-									<flowline />
-								</command>
-								<command class_type='calculation' title='Calculation' disable='1' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
-									<exp exp='displayOn = 1' />
+								<command class_type='calculation' title='Update Brightness Control Variable' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='Brightness = Brightness | 0x08' />
 								</command>
 							</flowline>
-							<flowline >
-								<command class_type='calculation' title='Calculation' disable='1' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
-									<exp exp='displayOn = 0' />
-								</command>
-								<command class_type='call' title='User Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ClearDigits' />
-								<command class_type='call' title='Call Macro' disable='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigits' >
-									<argument exp='16' />
-									<argument exp='16' />
-									<argument exp='16' />
-									<argument exp='16' />
-									<argument exp='0' />
-								</command>
-							</flowline>
+							<flowline />
 						</command>
 					</flowline>
 				</macro>
@@ -1342,7 +1330,7 @@ The colon character can also be controlled when writing to digit 1.' statediag='
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<param name='Digit' type='u8' description='Which digit of the display to change the setting for. (0...3)' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<param name='Value' type='u8' description='The number value to show at the selected digit.  (0...9)' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<param name='Colon' type='u8' description='Whether to display the decimal point for the chosen digit.' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Colon' type='u8' description='Whether to display the colon 0 = Don&apos;t Show,  1 = Show' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<command class_type='delay' title='Delay to preven dispaly corruption' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='50' type='1' />
 						<command class_type='comment' title='' comment='Configure the segments first.' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
 						<command class_type='switch' title='Switch' textarea='36,25,36,25' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Digit' >
@@ -1578,7 +1566,7 @@ The colon character can also be controlled when writing to digit 1.' statediag='
 						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
 							<argument exp='0' />
 							<argument exp='.Value0' />
-							<argument exp='0' />
+							<argument exp='.Colon' />
 						</command>
 						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
 							<argument exp='1' />
@@ -1588,12 +1576,12 @@ The colon character can also be controlled when writing to digit 1.' statediag='
 						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
 							<argument exp='2' />
 							<argument exp='.Value2' />
-							<argument exp='0' />
+							<argument exp='.Colon' />
 						</command>
 						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
 							<argument exp='3' />
 							<argument exp='.Value3' />
-							<argument exp='0' />
+							<argument exp='.Colon' />
 						</command>
 					</flowline>
 				</macro>
@@ -1634,7 +1622,7 @@ The colon character can also be controlled when writing to digit 1.' statediag='
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<param name='Digit' type='u8' description='Which of the four digits to change. (0...3)' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<param name='Value' type='u8' description='The number value to set the digit to (0...15), 16=Clear' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<param name='Colon' type='u8' description='Whether to show the colon character. Digit 1 only.' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+						<param name='Colon' type='u8' description='Whether to display the colon 0 = Don&apos;t Show,  1 = Show' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Digit &lt; 4' swap='0' >
 							<flowline >
 								<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='TM1637_Start' />
@@ -2327,16 +2315,26 @@ The colon character can also be controlled when writing to digit 1.' statediag='
 					<flowline name='Main' description='' statediag='0' >
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<local name='bright' type='u8' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
-						<command class_type='comment' title='' comment='Component Version Information
+						<command class_type='comment' title='' comment='Component Version Information;
 3, 3.0, 09-12-24, MW, improved component simuulation;
-4, 4.0, 04-02-25, MW, Adding simulation and embedded SetBrightness function;' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
-						<command class_type='call' title='Call Macro' disable='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ClearDigits' />
-						<command class_type='call' title='User Macro' disable='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
+4, 4.0, 04-02-25, MW, Adding simulation and embedded SetBrightness function;
+5, 5.0, 17-08-26, MW, Fixed Simulation ShowDigitSim so Colon remains on;
+5, 5.0, 17-08-26, MW, Fixed embedded SetBrightnes On/Off function; 
+5, 5.0, 17-08-26, MW, Changed wording for Colon parameter within SetBrightness function; ; ' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ClearDigits' />
+						<command class_type='call' title='User Macro' break='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitsSim' >
+							<argument exp='0' />
+							<argument exp='1' />
+							<argument exp='2' />
+							<argument exp='3' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='User Macro' break='1' disable='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='ShowDigitSim' >
 							<argument exp='0' />
 							<argument exp='2' />
 							<argument exp='1' />
 						</command>
-						<command class_type='loop' title='Loop' disable='1' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='1' >
+						<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='1' >
 							<flowline />
 						</command>
 						<command class_type='call' title='User Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='SetBrightnessSim' >
