@@ -623,7 +623,7 @@
     </interrupts>
 </device>
 <inline >
-    <defines code="//Missing TRISE workaround\nunsigned char TRISE;\n\n" />
+    <defines code="#define MX_PWM_NEW_TMR_CONF2\n#define MX_PWM_ALTTIMER 1\n\n//Missing TRISE workaround\nunsigned char TRISE;\n\n" />
     <directives code="#include &lt;xc.h&gt;\n#include &lt;math.h&gt;\n\n" />
     <main >
         <start code='\nvoid main()\n{\n\t#ifdef INTOSCHELPER\n\t\tINTOSCHELPERCODE\n\t#endif\n\n' />
