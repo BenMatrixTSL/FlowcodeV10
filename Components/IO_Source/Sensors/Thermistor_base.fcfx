@@ -149,35 +149,35 @@ positive supply rail.' />
 					<flowline name='GetIntegerTemperature' description='Reads the ADC input and returns the calculated Temperature as Integer degrees C' statediag='0' >
 						<return name='Return' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='adc' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADCConfig' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADCConfig' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.adc = ExternalADC' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='GetADCValue' >
+								<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='GetADCValue' >
 									<return exp='.adc' />
 								</command>
 							</flowline>
 						</command>
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='CalculateTemperature' >
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='CalculateTemperature' >
 							<return exp='.Return' />
 							<argument exp='.adc' />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.Return &gt; 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Return &gt; 0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Return = .Return + 5' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Return = .Return - 5' />
 								</command>
 							</flowline>
 						</command>
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='.Return = .Return / 10' />
 						</command>
 					</flowline>
@@ -185,16 +185,16 @@ positive supply rail.' />
 				<macro >
 					<flowline name='Ev_Initialise' description='Initialisation routine for the component once the component is linked to its parent' statediag='0' >
 						<return name='Return' type='u32' description='Non-zero to prevent initialisation' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Ev_Property' />
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Ev_Property' />
 					</flowline>
 				</macro>
 				<macro >
 					<flowline name='SetADCValue' description='Used to set the ADC value when an external ADC is being used.' statediag='0' >
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<param name='AdcValue' type='u16' description='Value of the external ADC. e.g. 0-255 for an 8-bit ADC' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADCConfig' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADCConfig' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='ExternalADC = .AdcValue' />
 								</command>
 							</flowline>
@@ -206,7 +206,7 @@ positive supply rail.' />
 					<flowline name='Ev_Property' description='Sent when a property has been changed by the User' statediag='0' >
 						<return name='Return' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='ADC_BITS' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='SamplePoints[0] = ((M25 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + M25))' />
 							<exp exp='SamplePoints[1] = ((P0 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + P0))' />
 							<exp exp='SamplePoints[2] = ((P25 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + P25))' />
@@ -215,36 +215,36 @@ positive supply rail.' />
 							<exp exp='SamplePoints[5] = ((P100 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + P100))' />
 							<exp exp='SamplePoints[6] = ((P125 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + P125))' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::channel&quot;' />
 							<argument exp='1 - ADCConfig' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::vrefop&quot;' />
 							<argument exp='1 - ADCConfig' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::convspd&quot;' />
 							<argument exp='1 - ADCConfig' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::actime&quot;' />
 							<argument exp='1 - ADCConfig' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetVisible' >
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetVisible' >
 							<argument exp='this' />
 							<argument exp='&quot;ADC_BITS&quot;' />
 							<argument exp='ADCConfig' />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADCConfig' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADCConfig' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADC_BITS &gt; 16' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADC_BITS &gt; 16' swap='0' >
 									<flowline >
-										<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetValue' >
+										<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetValue' >
 											<argument exp='this' />
 											<argument exp='&quot;ADC_BITS&quot;' />
 											<argument exp='16' />
@@ -254,12 +254,12 @@ positive supply rail.' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.GetValue' >
+								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.GetValue' >
 									<return exp='.ADC_BITS' />
 									<argument exp='adc_base1' />
 									<argument exp='&quot;bits&quot;' />
 								</command>
-								<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetValue' >
+								<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetValue' >
 									<argument exp='this' />
 									<argument exp='&quot;ADC_BITS&quot;' />
 									<argument exp='.ADC_BITS' />
@@ -272,7 +272,7 @@ positive supply rail.' />
 					<flowline name='SetChannel' description='Set the ADC Channel' statediag='0' >
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<param name='ChannelID' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='sim' title='Simulation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.SetValue' >
+						<command class_type='sim' title='Simulation' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.SetValue' >
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::channel&quot;' />
 							<argument exp='.ChannelID' />
@@ -292,30 +292,30 @@ positive supply rail.' />
 							<array size='20' />
 						</param>
 						<local name='ADC_BITS' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Compare$(.VarName,&quot;SamplePoints&quot;,0) == 0' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Compare$(.VarName,&quot;SamplePoints&quot;,0) == 0' swap='0' >
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADC_BITS &gt; 8' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADC_BITS &gt; 8' swap='0' >
 									<flowline >
-										<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADC_BITS &gt; 16' swap='0' >
+										<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADC_BITS &gt; 16' swap='0' >
 											<flowline >
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.Expansion = &quot;\nconst MX_UINT32 &quot; + .ExpandName + &quot;[] = \n{\n&quot;' />
 												</command>
 											</flowline>
 											<flowline >
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.Expansion = &quot;\nconst MX_UINT16 &quot; + .ExpandName + &quot;[] = \n{\n&quot;' />
 												</command>
 											</flowline>
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 											<exp exp='.Expansion = &quot;\nconst MX_UINT8 &quot; + .ExpandName + &quot;[] = \n{\n&quot;' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Expansion = .Expansion + STRING ((M25 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + M25))' />
 									<exp exp='.Expansion = .Expansion + &quot;,\n&quot;' />
 									<exp exp='.Expansion = .Expansion + STRING ((P0 * (1 &lt;&lt; ADC_BITS)) / (RESISTOR + P0))' />
@@ -334,7 +334,7 @@ positive supply rail.' />
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='.Return = 1' />
 						</command>
 					</flowline>
@@ -344,23 +344,23 @@ positive supply rail.' />
 						<return name='Return' type='f32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0.0' setinit='' />
 						<local name='adc' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='IntTemp' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADCConfig' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADCConfig' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.adc = ExternalADC' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='GetADCValue' >
+								<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='GetADCValue' >
 									<return exp='.adc' />
 								</command>
 							</flowline>
 						</command>
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='CalculateTemperature' >
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='CalculateTemperature' >
 							<return exp='.IntTemp' />
 							<argument exp='.adc' />
 						</command>
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='.Return = .IntTemp / 10.0' />
 						</command>
 					</flowline>
@@ -377,56 +377,56 @@ positive supply rail.' />
 						<local name='temp_ul' type='u32' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='ADCOffset' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='ADC_BITS' type='u8' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='Wiring' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Wiring' swap='0' >
 							<flowline >
-								<command class_type='comment' title='' comment='New Pull Up mode - Simply invert ADC reading' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADC_BITS = 16' swap='0' >
+								<command class_type='comment' title='' comment='New Pull Up mode - Simply invert ADC reading' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADC_BITS = 16' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Work out Max ADC value' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+										<command class_type='calculation' title='Work out Max ADC value' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 											<exp exp='.ADCOffset = 65535' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='calculation' title='Work out Max ADC value' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+										<command class_type='calculation' title='Work out Max ADC value' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 											<exp exp='.ADCOffset = (1 &lt;&lt; ADC_BITS) - 1' />
 										</command>
 									</flowline>
 								</command>
-								<command class_type='calculation' title='Invert ADC Reading' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Invert ADC Reading' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.temp_ui = .ADCOffset - .ADCValue' />
 									<exp exp='.ADCValue = .temp_ui' />
 								</command>
 							</flowline>
 							<flowline />
 						</command>
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='P125 &lt; M25' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='P125 &lt; M25' swap='0' >
 							<flowline >
-								<command class_type='comment' title='' comment='NTC Thermistor' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='comment' title='' comment='NTC Thermistor' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Return = 1250' />
 									<exp exp='.i = 6' />
 									<exp exp='.delta = 250' />
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.val_l = SamplePoints[.i]' />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue &lt;= .val_l' swap='1' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue &lt;= .val_l' swap='1' >
 									<flowline >
-										<command class_type='loop' title='Loop' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' type='0' exp='.i &gt; 0' start='0' >
+										<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='.i &gt; 0' start='0' >
 											<flowline >
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.i = .i - 1' />
 												</command>
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.val_h = SamplePoints[.i]' />
 												</command>
-												<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue = .val_h' swap='1' >
+												<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue = .val_h' swap='1' >
 													<flowline >
-														<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue &gt; .val_h' swap='1' >
+														<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue &gt; .val_h' swap='1' >
 															<flowline >
-																<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='0 //ADC_BITS &gt; 8' swap='0' >
+																<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='0 //ADC_BITS &gt; 8' swap='0' >
 																	<flowline >
-																		<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																		<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																			<exp exp='.temp_ul = (.ADCValue - .val_l) * 250' />
 																			<exp exp='.temp_ul = .temp_ul / (.val_h - .val_l)' />
 																			<exp exp='.delta = .temp_ul' />
@@ -434,7 +434,7 @@ positive supply rail.' />
 																		</command>
 																	</flowline>
 																	<flowline >
-																		<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																		<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																			<exp exp='.temp_ui = (.ADCValue - .val_l) * 250' />
 																			<exp exp='.temp_ui = .temp_ui / (.val_h - .val_l)' />
 																			<exp exp='.delta = .temp_ui' />
@@ -444,19 +444,19 @@ positive supply rail.' />
 																</command>
 															</flowline>
 															<flowline >
-																<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																	<exp exp='.val_l = .val_h' />
 																</command>
 															</flowline>
 														</command>
 													</flowline>
 													<flowline >
-														<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+														<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 															<exp exp='.i = 0' />
 														</command>
 													</flowline>
 												</command>
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.Return = .Return - .delta' />
 												</command>
 											</flowline>
@@ -466,32 +466,32 @@ positive supply rail.' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='comment' title='' comment='PTC Thermistor' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='comment' title='' comment='PTC Thermistor' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Return = -250' />
 									<exp exp='.i = 0' />
 									<exp exp='.delta = 250' />
 								</command>
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.val_l = SamplePoints[.i]' />
 								</command>
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue &lt;= .val_l' swap='1' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue &lt;= .val_l' swap='1' >
 									<flowline >
-										<command class_type='loop' title='Loop' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' type='0' exp='.i &lt; 6' start='0' >
+										<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='.i &lt; 6' start='0' >
 											<flowline >
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.i = .i + 1' />
 												</command>
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.val_h = SamplePoints[.i]' />
 												</command>
-												<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue = .val_h' swap='1' >
+												<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue = .val_h' swap='1' >
 													<flowline >
-														<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.ADCValue &gt; .val_h' swap='1' >
+														<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.ADCValue &gt; .val_h' swap='1' >
 															<flowline >
-																<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='0 //ADC_BITS &gt; 8' swap='0' >
+																<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='0 //ADC_BITS &gt; 8' swap='0' >
 																	<flowline >
-																		<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																		<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																			<exp exp='.temp_ul = (.ADCValue - .val_l) * 250' />
 																			<exp exp='.temp_ul = .temp_ul / (.val_h - .val_l)' />
 																			<exp exp='.delta = .temp_ul' />
@@ -499,7 +499,7 @@ positive supply rail.' />
 																		</command>
 																	</flowline>
 																	<flowline >
-																		<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																		<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																			<exp exp='.temp_ui = (.ADCValue - .val_l) * 250' />
 																			<exp exp='.temp_ui = .temp_ui / (.val_h - .val_l)' />
 																			<exp exp='.delta = .temp_ui' />
@@ -509,19 +509,19 @@ positive supply rail.' />
 																</command>
 															</flowline>
 															<flowline >
-																<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+																<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 																	<exp exp='.val_l = .val_h' />
 																</command>
 															</flowline>
 														</command>
 													</flowline>
 													<flowline >
-														<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+														<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 															<exp exp='.i = 6' />
 														</command>
 													</flowline>
 												</command>
-												<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+												<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 													<exp exp='.Return = .Return + .delta' />
 												</command>
 											</flowline>
@@ -537,21 +537,21 @@ positive supply rail.' />
 					<flowline name='GetADCValue' description='Returns the Raw ADC value from the Analogue Channel' statediag='0' >
 						<return name='Return' type='u16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
 						<local name='ADC_BITS' type='u8' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADCConfig' swap='0' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADCConfig' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Return = 0' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='ADC_BITS &gt; 8' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='ADC_BITS &gt; 8' swap='0' >
 									<flowline >
-										<command class_type='call' title='Call Component Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' component='adc_base1' macro='GetInt' >
+										<command class_type='call' title='Call Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='adc_base1' macro='GetInt' >
 											<return exp='.Return' />
 										</command>
 									</flowline>
 									<flowline >
-										<command class_type='call' title='Call Component Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' component='adc_base1' macro='GetByte' >
+										<command class_type='call' title='Call Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='adc_base1' macro='GetByte' >
 											<return exp='.Return' />
 										</command>
 									</flowline>
@@ -567,17 +567,17 @@ positive supply rail.' />
 						<local name='i' type='u8' description='LUT Index' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
 						<local name='lo' type='f32' description='Values from the LUT' isconst='0' isHidden='0' isinit='1' usrinit='0.0' setinit='0.0' />
 						<local name='hi' type='f32' description='Values from the LUT' isconst='0' isHidden='0' isinit='1' usrinit='0.0' setinit='0.0' />
-						<command class_type='comment' title='' comment='Ensure temperature is within the valid range' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-						<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.Temperature &lt; -25.0' swap='0' >
+						<command class_type='comment' title='' comment='Ensure temperature is within the valid range' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Temperature &lt; -25.0' swap='0' >
 							<flowline >
-								<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 									<exp exp='.Temperature = -25' />
 								</command>
 							</flowline>
 							<flowline >
-								<command class_type='decision' title='Decision' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='.Temperature &gt; 125.0' swap='0' >
+								<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='.Temperature &gt; 125.0' swap='0' >
 									<flowline >
-										<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+										<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 											<exp exp='.Temperature = 125.0' />
 										</command>
 									</flowline>
@@ -585,20 +585,28 @@ positive supply rail.' />
 								</command>
 							</flowline>
 						</command>
-						<command class_type='comment' title='' comment='Obtain the ADC value from the LUT' textarea='112,20,112,20' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+						<command class_type='comment' title='' comment='Obtain the ADC value from the LUT' textarea='112,20,112,20' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='.i = (floor (.Temperature / 25.0)) + 1' />
 							<exp exp='.lo = SamplePoints[.i]' />
 							<exp exp='.hi = SamplePoints[.i + 1]' />
 							<exp exp='.Temperature = ((.Temperature / 25.0) - .i + 1) * (.hi - .lo) + .lo' />
 							<exp exp='.Temperature = .Temperature / ((1 &lt;&lt; ADC_BITS) - 1)' />
 						</command>
-						<command class_type='sim' title='Built-in Function' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Component.Property.GetValue' >
+						<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='Wiring' swap='0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+									<exp exp='.Temperature = 1.0 - .Temperature' />
+								</command>
+							</flowline>
+							<flowline />
+						</command>
+						<command class_type='sim' title='Built-in Function' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Component.Property.GetValue' >
 							<return exp='.i' />
 							<argument exp='this' />
 							<argument exp='&quot;adc_base1::channel&quot;' />
 						</command>
-						<command class_type='sim' title='Simulation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Connection.SetAn' >
+						<command class_type='sim' title='Simulation' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Connection.SetAn' >
 							<argument exp='.i' />
 							<argument exp='.Temperature' />
 							<argument exp='false' />
@@ -610,23 +618,23 @@ positive supply rail.' />
 						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
 						<command class_type='comment' title='' comment='Component Version Information;
 5, 2.0, 19-07-24, BR, Added compatibility for external ADC;
-5, 2.0, 19-07-24, BR, Allowed full bit depth usage of the internal ADC;' textarea='12,0,12,0' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' />
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Ev_Initialise' />
-						<command class_type='calculation' title='Calculation' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' >
+5, 2.0, 19-07-24, BR, Allowed full bit depth usage of the internal ADC;' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Ev_Initialise' />
+						<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
 							<exp exp='Temp = 75' />
 						</command>
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='SetTemperature' >
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='SetTemperature' >
 							<argument exp='Temp' />
 						</command>
-						<command class_type='call' title='Call Macro' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='GetRealTemperature' >
+						<command class_type='call' title='Call Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='GetRealTemperature' >
 							<return exp='Temp' />
 						</command>
-						<command class_type='sim' title='Simulation' disable='1' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' macro='Debug.PrintLn' >
+						<command class_type='sim' title='Simulation' disable='1' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' macro='Debug.PrintLn' >
 							<argument exp='Temp' />
 						</command>
-						<command class_type='loop' title='Loop' disable='1' cmdcolor='16098537' cmdcolor_sec='9519237' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' type='0' exp='1' >
+						<command class_type='loop' title='Loop' disable='1' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='1' >
 							<flowline >
-								<command class_type='delay' title='Delay' disable='1' cmdcolor='16772726' cmdcolor_sec='13404690' cmdcolor_txt='8355711' cmdgradient='1' cmdopacity='1' exp='500' type='1' />
+								<command class_type='delay' title='Delay' disable='1' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='500' type='1' />
 							</flowline>
 						</command>
 					</flowline>
@@ -680,10 +688,10 @@ Template' />
 	<keymap />
 	<panel2d shadows='0' lighting='2' brightness='0' >
 		<background rgb='9737364' img='' style='0' />
-		<camera xe='20.6257' ye='-91.8838' ze='646.054' xt='20.6257' yt='-91.8838' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
-		<viewport dx='354' dy='790' zoom='66.301' fix_topleft='0' />
+		<camera xe='20.6257' ye='-91.8838' ze='910.68' xt='20.6257' yt='-91.8838' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='499' dy='782' zoom='66.301' fix_topleft='0' />
 		<page x='1000' y='1000' show='0' rgb='16777215' />
-		<winpos ID='7005' RectRecentFloat='-866,-787,-216,-337' RectRecentDocked='1040,141,1414,1021' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+		<winpos ID='7005' RectRecentFloat='2114,91,3239,816' RectRecentDocked='915,141,1434,1013' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
 	</panel2d>
 	<panel3d shadows='1' lighting='2' brightness='0' perspective='1' >
 		<background rgb='32768' img='' style='0' />
@@ -696,21 +704,21 @@ Template' />
 		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
 		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
 		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
-		<winpos ID='7004' RectRecentFloat='0,425,654,1002' RectRecentDocked='0,0,242,880' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+		<winpos ID='7004' RectRecentFloat='0,425,654,1002' RectRecentDocked='0,0,257,566' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
 	</panel3d>
 	<panels2d count='0' />
 	<layout >
-		<view type='0' name='CalculateTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='115' scrollx='0' scrolly='66' flags='0' />
-		<view type='0' name='SetChannel' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='GetRealTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='GetIntegerTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='GetADCValue' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Property' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='SetTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_AddVar' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
-		<view type='0' name='SetADCValue' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAUgIAAGsDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='CalculateTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='115' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='SetChannel' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='GetRealTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='GetIntegerTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='GetADCValue' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Property' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='SetTemperature' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_AddVar' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='Ev_Initialise' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='SetADCValue' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA-QEAAGMDAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
 	</layout>
 </document>
 </root>
